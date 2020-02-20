@@ -44,21 +44,49 @@ int fib_rec(int n)
 //function again and again for the same value
 //for the modified fun we'll store the value in an
 //array once calculated as shown below
-int fib_mod(int a[], int n)
+int n;
+int a[100];
+int fib_mod(int n)
 {
-    
+    if(n<=1)
+    {
+        a[n]=n;
+        return n;
+    }
+    else
+    { 
+        if(a[n-2] == -1)
+        {
+            a[n-1]=fib_mod(n-2);
+        }
+        if(a[n-1] == -1)
+        {
+            a[n-1]=fib_mod(n-1);
+        }
+        return a[n-2]+a[n-1];
+    }
+    // return a[n-2]+a[n-1];
 }
+//time complexity is O(n)
 
 int main()
 {
-    int n;
+    // int n;
     cout<<"Enter n: ";
     cin>>n;
 
     cout<<fib(n)<<endl;
 
     //recurssive fib called
-    cout<<fib_rec(n);
+    cout<<fib_rec(n)<<endl;
+
+    // static int a[n];
+    for(int i=0;i<n;i++)
+    {
+        a[i]= -1;
+    }
+    //calling modified fibonacci function
+    cout<<fib_mod(n)<<endl;
 
     return 0;
 }
