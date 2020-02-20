@@ -30,7 +30,7 @@ int exp_fast(int base,int power)
     {
         return exp_fast(base*base, power/2);
     }
-    return exp_fast(base*(base*base, (power-1)/2));
+    return base*exp_fast(base*base, (power-1)/2);
 }
 
 int main()
@@ -46,6 +46,9 @@ int main()
     int result=exp(base,pow);
     cout<<"exp\n";
     cout<<result<<endl;
+
+    int result_fast=exp_fast(base, pow);
+    cout <<"Exp fast : " <<result_fast;
 
     return 0;
 }
