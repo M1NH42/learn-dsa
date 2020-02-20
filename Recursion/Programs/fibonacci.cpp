@@ -25,13 +25,34 @@ int fib(int n)
     return s;
 }
 
+//recurssive function to find fibonacci series
+//the problem with this is : it call the same 
+//function again and again for the same value
+//time complexity for this is O(2^n) which is
+//not good
+int fib_rec(int n)
+{
+    if(n<=1)
+    {
+        return n;
+    }
+    return fib_rec(n-2)+fib_rec(n-1);
+}
+
+//the better approach is to store the value which
+//is being called once so we dont have to call the
+//function again and again for the same value
+
 int main()
 {
     int n;
     cout<<"Enter n: ";
     cin>>n;
 
-    cout<<fib(n);
+    cout<<fib(n)<<endl;
+
+    //recurssive fib called
+    cout<<fib_rec(n);
 
     return 0;
 }
