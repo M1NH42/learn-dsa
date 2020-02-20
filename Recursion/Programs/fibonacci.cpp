@@ -42,6 +42,12 @@ int fib_rec(int n)
 //the better approach is to store the value which
 //is being called once so we dont have to call the
 //function again and again for the same value
+//for the modified fun we'll store the value in an
+//array once calculated as shown below
+int fib_mod(int a[], int n)
+{
+    
+}
 
 int main()
 {
