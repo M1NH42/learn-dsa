@@ -11,10 +11,7 @@ int sum_n(int n)
     {
         return sum_n(n-1)+n;
     }
-    
-
 }
-
 int main()
 {
     int n;
