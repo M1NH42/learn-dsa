@@ -16,12 +16,27 @@ int sum_n(int n)
 
 //iterative function to find sum of n natural numbers
 
+int i_sum(int n)
+{
+    int sum=0;
+    for(int i=1;i<=n;i++)
+    {
+        sum = sum+i;
+        //cout<<sum;
+    }
+    return sum;
+}
+
 int main()
 {
     int n;
     cin>>n;
 
-    cout<<sum_n(n);
+    //recursive funtion call
+    cout<<sum_n(n)<<endl;
+
+    //iterative function call
+    cout<<i_sum(n)<<endl;
 
     return 0;
 }
