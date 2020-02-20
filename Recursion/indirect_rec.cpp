@@ -3,7 +3,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void fun_2(int n);
+void fun_2(int n); // must be declared before fun_1 so that it can be accessed
 
 void fun_1(int n)
 {
