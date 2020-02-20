@@ -5,7 +5,8 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-
+// below function is slow
+//as it makes n times multiplication
 int exp(int base, int power)
 {
     if(power==0)
