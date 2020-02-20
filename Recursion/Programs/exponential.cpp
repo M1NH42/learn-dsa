@@ -20,6 +20,19 @@ int exp(int base, int power)
 // eg: 2^9 = 2 * (2^2)^4 
 //eg_2: 2^8 =(2^2)^4
 
+int exp_fast(int base,int power)
+{
+    if(power==0)
+    {
+        return 1;
+    }
+    if(power%2 ==0)//even
+    {
+        return exp_fast(base*base, power/2);
+    }
+    return exp_fast(base*(base*base, (power-1)/2));
+}
+
 int main()
 {
     int base;
