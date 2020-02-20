@@ -6,12 +6,12 @@ using namespace std;
 
 int factorial(int n)
 {
-    if(n<0)
+    /* if(n<0)
     {
         cout <<"Enter a poositive number\n";
         return 0;
-    }
-    else if(n==0)
+    } */
+    if(n==0)
     {
         return 1;
     }
@@ -26,6 +26,6 @@ int main()
     cout<<"Enter a number\n";
     cin>>num;
 
-    cout<<"Factorial of a given number is : " << factorial(num)<<endl;
+    cout<<"Factorial of a given number is : " << factorial(num)<<endl;          
     return 0;
 }
