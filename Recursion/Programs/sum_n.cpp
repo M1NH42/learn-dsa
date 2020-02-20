@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 // takes O(n) time complexity
+//recursive funtion to find sum of n natural numbers
 int sum_n(int n)
 {
     if(n==0)
@@ -12,6 +13,9 @@ int sum_n(int n)
         return sum_n(n-1)+n;
     }
 }
+
+//iterative function to find sum of n natural numbers
+
 int main()
 {
     int n;
