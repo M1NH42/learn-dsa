@@ -16,6 +16,10 @@ int exp(int base, int power)
     return exp(base, power-1) *base;
 }
 
+//now we'll write another function that is faster than the above one
+// eg: 2^9 = 2 * (2^2)^4 
+//eg_2: 2^8 =(2^2)^4
+
 int main()
 {
     int base;
