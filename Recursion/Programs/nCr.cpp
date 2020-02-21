@@ -13,6 +13,8 @@ using namespace std;
     return nCr(n-1, r-1)+nCr(n-1,r);
 } */
 
+
+//recursive funtion to calculate the nCr of given n and r
 int NCR(int n,int r)
 {
 if(n==r || r==0)
