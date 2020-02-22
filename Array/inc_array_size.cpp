@@ -15,8 +15,18 @@ int main()
         cin>>p[i]; //takes elemts from user
     }
 
+    int *q = new int[10]; // new pointer array in heap named q
+    for(int i=0;i<5;i++)
+    {
+        q[i]=p[i]; // copy elements of p in q
+    }
+    free(p); // delete p : free heap
+    p=q; // p pointing to q array created in the heap
+    q=NULL; // make q zero so p can access it
+    //free(p);
+
     cout<<"Elements are:\n";
-    for(int i=0;i<10;i++)
+    for(int i=0;i<5;i++)
     {
         cout<<p[i]<<endl; //prints the elements of array p
     }
