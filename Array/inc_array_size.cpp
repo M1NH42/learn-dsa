@@ -26,7 +26,7 @@ int main()
     //free(p);
 
     cout<<"Elements are:\n";
-    for(int i=0;i<5;i++) //traversal thrpough an array
+    for(int i=0;i<5;i++) //traversal through an array
     {
         cout<<p[i]<<endl; //prints the elements of array p
     }
