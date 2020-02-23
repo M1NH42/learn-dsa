@@ -12,6 +12,31 @@ struct Array // needed to combine properties of an array in one
     int length;
 };
 
+void append(struct Array *arr, int x) // this fuction will first chech if lenght<size only then
+                                        // insert element x at the ed of the array
+{
+    if(arr->length < arr->size)
+    {
+        arr->A[arr->length]=x;
+        arr->length++;
+    }
+}
+
+// this function will insert an element 'x' at a given index in that array
+// by shifting the elements if presesnt at that index
+void insert_at(struct Array *arr, int index, int x)
+{
+    if(index>=0 && index <= arr->length)
+    {
+        for(int i=arr->length; i>index;i--)
+        {
+            arr->A[i]=arr->A[i-1];
+        }
+        arr->A[index]=x;
+        arr->length++;
+    }
+}
+
 void display(struct Array arr)
 {
     cout<<"Elements of an array\n";
@@ -44,7 +69,20 @@ int main()
 
     arr.length=n; // set length equals n
 
+    cout<<"Enter x: ";
+    int x;
+    cin>>x;
+
+    //append(&arr,x);
+
+    cout<<"Enter index: ";
+    int index;
+    cin>>index;
+    insert_at(&arr,index,x);
+
     display(arr);
+
+    cout<<"Length of the array: "<<arr.length<<endl;
 
     return 0;
 }
