@@ -13,7 +13,6 @@ struct Array // needed to combine properties of an array in one
 };
 
 void append(struct Array *arr, int x) // this fuction will first chech if lenght<size only then
-                                      // insert element x at the ed of the array
 {
     if(arr->length < arr->size)
     {
