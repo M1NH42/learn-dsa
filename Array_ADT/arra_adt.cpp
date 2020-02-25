@@ -36,6 +36,8 @@ void insert_at(struct Array *arr, int index, int x)
     }
 }
 
+// this function will the element at a given index
+// and return the value stored in the x
 int delete_arr(struct Array *arr, int index)
 {
     int x=0;
