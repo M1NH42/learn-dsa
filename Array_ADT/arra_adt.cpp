@@ -36,6 +36,11 @@ void insert_at(struct Array *arr, int index, int x)
     }
 }
 
+void delete_arr(struct Array arr, int index)
+{
+    
+}
+
 void display(struct Array arr)
 {
     cout<<"Elements of an array\n";
