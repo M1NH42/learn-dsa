@@ -36,9 +36,20 @@ void insert_at(struct Array *arr, int index, int x)
     }
 }
 
-void delete_arr(struct Array arr, int index)
+int delete_arr(struct Array *arr, int index)
 {
-    
+    int x=0;
+    if(index>=0 && index<= arr->length)
+    {
+        x=arr->A[index];
+        for(int i=index;i<arr->length;i++)
+        {
+            arr->A[i]=arr->A[i+1];
+        }
+        arr->length--;
+        return x;
+    }
+    return -1; //
 }
 
 void display(struct Array arr)
@@ -73,16 +84,18 @@ int main()
 
     arr.length=n; // set length equals n
 
-    cout<<"Enter x: ";
+    /* cout<<"Enter x: ";
     int x;
     cin>>x;
-
+ */
     //append(&arr,x);
 
     cout<<"Enter index: ";
     int index;
     cin>>index;
-    insert_at(&arr,index,x);
+    //insert_at(&arr,index,x);
+
+    delete_arr(&arr, index);
 
     display(arr);
 
