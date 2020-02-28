@@ -53,11 +53,13 @@ int main()
     cin>>index;
     //insert_at(&arr,index,x);
 
-    delete_arr(&arr, index);
+    //delete_arr(&arr, index);
 
     display(arr);
 
     cout<<"Length of the array: "<<arr.length<<endl;
+
+    cout<<"*******************************************\n";
 
     return 0;
 }
