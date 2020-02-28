@@ -19,6 +19,18 @@ void display(struct Array arr)
     }
 }
 
+int linear_search(struct Array arr, int key)
+{
+    for(int i=0; i<arr.size; i++)
+    {
+        if(key==arr.A[i])
+        {
+            return i;
+        }
+        return -1;
+    }
+}
+
 int main()
 {      
     struct Array arr;
@@ -48,9 +60,9 @@ int main()
  */
     //append(&arr,x);
 
-    cout<<"Enter index: ";
+    /* cout<<"Enter index: ";
     int index;
-    cin>>index;
+    cin>>index; */
     //insert_at(&arr,index,x);
 
     //delete_arr(&arr, index);
@@ -60,6 +72,13 @@ int main()
     cout<<"Length of the array: "<<arr.length<<endl;
 
     cout<<"*******************************************\n";
+
+    int key;
+    cout<<"Enter key: ";
+    cin>>key;
+
+    cout<<"key present at: "<<linear_search(arr, key)<<endl;
+    //display(arr);
 
     return 0;
 }
