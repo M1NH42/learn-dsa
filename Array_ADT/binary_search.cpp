@@ -48,6 +48,29 @@ int i_linearsearch(struct Array arr, int key)
 }
 
 // recursive binaru search for an element at the mid
+int r_binarysearch(struct Array arr,int l, int h,int key)
+{
+    /* int l=0;
+    int h=arr.length; */
+    int mid;
+    if(l<=h)
+    {
+        mid=(l+h)/2;
+        if(key==arr.A[mid])
+        {
+            return mid;
+        }
+        else if(key<arr.A[mid])
+        {
+            return r_binarysearch(arr,l,mid-1,key);
+        }
+        else
+        {
+            return r_binarysearch(arr,mid+1,h,key);
+        }
+    }
+    return -1;
+}
 
 int main()
 {      
@@ -77,10 +100,12 @@ int main()
     int key;
     cout<<"Enter key: ";
     cin>>key;
+    int l=0;
+    int h=arr.length;
 
     int res;
-    res=i_linearsearch(arr,key); // linearsearch() called and result is tored in res variable
-
+    //res=i_linearsearch(arr,key); // linearsearch() called and result is tored in res variable
+    res=r_binarysearch(arr,l,h,key);
     cout<<"Element "<<key<<" present at: "<<res<<endl;
     //cout<<"Length of the array: "<<arr.length<<endl;
 
