@@ -83,7 +83,7 @@ int sum(Array arr)
     {
         sum += arr.A[i]; // keep adding every element and store in sum variable
     }
-    return sum;
+    return sum; //returns sum
 }
 
 // average function
