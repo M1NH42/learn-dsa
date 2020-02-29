@@ -78,13 +78,23 @@ int min(struct Array arr)
 // sum function
 int sum(Array arr)
 {
-
+    int sum =0; // initialize sum as zero
+    for(int i=0; i<arr.length; i++)
+    {
+        sum += arr.A[i]; // keep adding every element and store in sum variable
+    }
+    return sum;
 }
 
 // average function
 int avgerage(struct Array arr)
 {
-
+    int sum=0;
+    for(int i=0;i<arr.length;i++)
+    {
+        sum += arr.A[i];
+    }
+    return sum/arr.length;
 }
 
 int main()
