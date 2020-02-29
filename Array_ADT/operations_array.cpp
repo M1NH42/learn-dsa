@@ -29,7 +29,7 @@ void display(struct Array arr)
 // get function
 int get(Array arr, int index)
 {
-    if(index>=0 && index<arr.length)
+    if(index>=0 && index<arr.length) // checks if index is valid or not
     {
         return arr.A[index];
     }
@@ -38,7 +38,11 @@ int get(Array arr, int index)
 // set function
 int set(Array arr, int index, int val)
 {
-
+    if(index>=0 && index<arr.length) // checks if index is valid or not
+    {
+        arr.A[index]=val;
+    }
+    return arr.A[index];
 }
 
 // max function
@@ -62,7 +66,7 @@ int sum(Array arr)
 // average function
 int avgerage(struct Array arr)
 {
-    
+
 }
 
 int main()
