@@ -26,6 +26,15 @@ void display(struct Array arr)
     }
 }
 
+// get function
+int get(Array arr, int index)
+{
+    if(index>=0 && index<arr.length)
+    {
+        return arr.A[index];
+    }
+}
+
 int main()
 {
     struct Array arr;
@@ -59,7 +68,15 @@ int main()
 
     cout<<"***********************************"<<endl;
 
-    
+    int index;
+    cout<<"Enter index: ";
+    cin>>index;
+
+    cout<<"***********************************"<<endl;
+
+    cout<<"Element at "<<index<<" : "<<get(arr, index)<<endl;
+
+    cout<<"***********************************"<<endl;
 
     return 0;
 }
