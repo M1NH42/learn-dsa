@@ -48,6 +48,9 @@ int i_linearsearch(struct Array arr, int key)
 }
 
 // recursive binaru search for an element at the mid
+//it's a tail recurssion
+// if tail recursion it's better to write function using loop
+// as tail recursion internally uses stack
 int r_binarysearch(struct Array arr,int l, int h,int key)
 {
     /* int l=0;
