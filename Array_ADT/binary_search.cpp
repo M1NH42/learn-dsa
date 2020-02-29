@@ -22,6 +22,31 @@ void display(struct Array arr)
     }
 }
 
+// this is iterative linear search function
+int i_linearsearch(struct Array arr, int key)
+{
+    int l=0;
+    int h=arr.length;
+    int mid;
+    while(l<=h)
+    {
+        mid=(l+h)/2;
+        if(key==arr.A[mid])
+        {
+            return mid;
+        }
+        else if(key<arr.A[mid])
+        {
+            return h= mid-1;
+        }
+        else
+        {
+            return l= mid+1;
+        }
+    }
+    return -1;
+}
+
 int main()
 {      
     struct Array arr;
@@ -35,7 +60,7 @@ int main()
     cout<<"Enter lenth of an arraY: ";
     cin>>n;
 
-    //arr.length=0;
+    arr.length=0;
 
     cout<<"Elements of an array\n";
     for(int i=0;i<n;i++)
@@ -43,24 +68,19 @@ int main()
         cin>>arr.A[i]; //takes input from user upto n-1 elements
     }
 
-    //arr.length=n; // set length equals n
+    arr.length=n; // set length equals n
 
-    /* cout<<"Enter x: ";
-    int x;
-    cin>>x;
- */
-    //append(&arr,x);
+    display(arr); // array display() called
 
-    /* cout<<"Enter index: ";
-    int index;
-    cin>>index; */
-    //insert_at(&arr,index,x);
+    int key;
+    cout<<"Enter key: ";
+    cin>>key;
 
-    //delete_arr(&arr, index);
+    int res;
+    res=i_linearsearch(arr,key); // linearsearch() called and result is tored in res variable
 
-    display(arr);
-
-    cout<<"Length of the array: "<<arr.length<<endl;
+    cout<<"Element "<<key<<" present at: "<<res<<endl;
+    //cout<<"Length of the array: "<<arr.length<<endl;
 
     return 0;
 }
