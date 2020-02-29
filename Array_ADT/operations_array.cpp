@@ -140,9 +140,9 @@ int main()
 
     cout<<"***********************************"<<endl;
 
-    cout<<"Element at "<<index<<" "<<get(arr, index);
+    /* cout<<"Element at "<<index<<" "<<get(arr, index);
     
-    cout<<"***********************************"<<endl;
+    cout<<"***********************************"<<endl; */
 
     int x;
     cout<<"Enter x: ";
