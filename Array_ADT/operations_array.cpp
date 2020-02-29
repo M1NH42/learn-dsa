@@ -54,7 +54,7 @@ int max(Array arr)
     {
         if(arr.A[i]>max) //checks if max > elements in array
         {
-            max=arr.A[i];
+            max=arr.A[i]; // update the max
         }
     }
     return max;
