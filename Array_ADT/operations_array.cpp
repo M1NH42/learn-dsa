@@ -148,6 +148,7 @@ int main()
     cout<<"Enter x: ";
     cin>>x;
     cout<<Set(arr,index,x)<<endl;
+    display(arr);
 
     cout<<"***********************************"<<endl;
 
