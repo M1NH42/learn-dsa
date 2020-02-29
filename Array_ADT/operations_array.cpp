@@ -63,7 +63,16 @@ int max(Array arr)
 // min function
 int min(struct Array arr)
 {
+    int min =arr.A[0]; // set first element as min
 
+    for(int i=0; i<arr.length; i++) // traversing and checking
+    {
+        if(arr.A[i]<min) // checks if min< elements in array
+        {
+            min=arr.A[i];
+        }
+    }
+    return min;
 }
 
 // sum function
