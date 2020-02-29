@@ -48,7 +48,16 @@ int set(Array arr, int index, int val)
 // max function
 int max(Array arr)
 {
+    int max=arr.A[0];
 
+    for(int i=0; i<arr.length; i++)
+    {
+        if(arr.A[i]>max) //checks if max > elements in array
+        {
+            max=arr.A[i];
+        }
+    }
+    return max;
 }
 
 // min function
