@@ -47,6 +47,8 @@ int i_linearsearch(struct Array arr, int key)
     return -1;
 }
 
+// recursive binaru search for an element at the mid
+
 int main()
 {      
     struct Array arr;
