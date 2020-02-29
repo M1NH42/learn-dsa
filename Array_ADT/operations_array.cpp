@@ -48,7 +48,7 @@ int set(Array arr, int index, int val)
 // max function
 int max(Array arr)
 {
-    int max=arr.A[0];
+    int max=arr.A[0]; // lets take first element of an array is max
 
     for(int i=0; i<arr.length; i++)
     {
