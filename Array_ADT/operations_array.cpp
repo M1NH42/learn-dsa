@@ -36,7 +36,7 @@ int get(Array arr, int index)
 }
 
 // set function
-int set(Array arr, int index, int val)
+int Set(Array arr, int index, int val)
 {
     if(index>=0 && index<arr.length) // checks if index is valid or not
     {
@@ -140,5 +140,32 @@ int main()
 
     cout<<"***********************************"<<endl;
 
+    cout<<"Element at "<<index<<" "<<get(arr, index);
+    
+    cout<<"***********************************"<<endl;
+
+    int x;
+    cout<<"Enter x: ";
+    cin>>x;
+    cout<<Set(arr,index,x)<<endl;
+
+    cout<<"***********************************"<<endl;
+
+    cout<<"Maximum element in array : "<<max(arr)<<endl;
+
+    cout<<"***********************************"<<endl;
+
+    cout<<"Minimum alement in an array: "<<min(arr)<<endl;
+
+    cout<<"***********************************"<<endl;
+
+    cout<<"Sum of elements of an array : "<<sum(arr)<<endl;
+
+    cout<<"***********************************"<<endl;
+
+    cout<<"Average of elements in an array: "<<avgerage(arr)<<endl;
+
+    cout<<"***********************************"<<endl;
+    cout<<"*******Minhaz Alam*****************"<<endl;
     return 0;
 }
