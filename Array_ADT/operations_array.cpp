@@ -89,12 +89,12 @@ int sum(Array arr)
 // average function
 int avgerage(struct Array arr)
 {
-    int sum=0;
+    int sum=0; // set sum=0
     for(int i=0;i<arr.length;i++)
     {
-        sum += arr.A[i];
+        sum += arr.A[i]; // keep adding lements of an array
     }
-    return sum/arr.length;
+    return sum/arr.length; //returns average
 }
 
 int main()
