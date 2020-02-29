@@ -35,6 +35,36 @@ int get(Array arr, int index)
     }
 }
 
+// set function
+int set(Array arr, int index, int val)
+{
+
+}
+
+// max function
+int max(Array arr)
+{
+
+}
+
+// min function
+int min(struct Array arr)
+{
+
+}
+
+// sum function
+int sum(Array arr)
+{
+
+}
+
+// average function
+int avgerage(struct Array arr)
+{
+    
+}
+
 int main()
 {
     struct Array arr;
