@@ -84,7 +84,7 @@ int main()
     //cout<<"***********************************"<<endl;
     //is_sorted(a,n);
 
-    neg_pos(a,n);
+    neg_pos(a,n); // called
 
     cout<<"***********************************"<<endl;
     display(a,n);
