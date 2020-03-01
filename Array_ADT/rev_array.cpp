@@ -61,8 +61,8 @@ int main()
 
     cout<<"Reverse array elements are:\n";
 
-    rev_array(arr, n); // reverse function called
-    display(arr,n);
+    //rev_array(arr, n); // reverse function called
+    //display(arr,n);
 
     cout<<"***********************************"<<endl;
 
