@@ -34,10 +34,10 @@ int is_sorted(int arr[], int n)
     {
         if(arr[i]>arr[i+1])
         {
-            return false;
+            return 0;
         }
     }
-    return true;
+    return 1;
 }
 
 void neg_pos(int a[], int n){
@@ -81,8 +81,8 @@ int main()
 
     insert_in_sorted(a,n,val);
 
-    //cout<<"***********************************"<<endl;
-    //is_sorted(a,n);
+    cout<<"***********************************"<<endl;
+    cout<<"Array is sorted: "<<is_sorted(a,n);
 
     neg_pos(a,n); // called
 
