@@ -28,6 +28,18 @@ void insert_in_sorted(int arr[],int n, int x)
     arr[i+1]=x;
 }
 
+int is_sorted(int arr[], int n)
+{
+    for(int i=0; i<n-1; i++)
+    {
+        if(arr[i]>arr[i+1])
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
 int main()
 {
     int n;
@@ -35,18 +47,24 @@ int main()
     cin>>n;
 
     int a[n];
+    cout<<"***********************************"<<endl;
     // take input from user and store in the array
     for(int i=0;i<n;i++)
     {
         cin>>a[i]; //stores in array of size n-1
     }
 
+    cout<<"***********************************"<<endl;
     int val;
     cout<<"Enter val: ";
     cin>>val;
 
     insert_in_sorted(a,n,val);
 
+    cout<<"***********************************"<<endl;
+    is_sorted(a,n);
+
+    cout<<"***********************************"<<endl;
     display(a,n);
 
     return 0;
