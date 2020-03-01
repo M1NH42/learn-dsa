@@ -81,8 +81,10 @@ int main()
 
     insert_in_sorted(a,n,val);
 
-    cout<<"***********************************"<<endl;
-    is_sorted(a,n);
+    //cout<<"***********************************"<<endl;
+    //is_sorted(a,n);
+
+    neg_pos(a,n);
 
     cout<<"***********************************"<<endl;
     display(a,n);
