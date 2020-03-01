@@ -40,6 +40,26 @@ int is_sorted(int arr[], int n)
     return true;
 }
 
+void neg_pos(int a[], int n){
+    int i=0;
+    int j=n-1;
+
+    while(i<j){
+        while(a[i]<0){
+            i++;
+        }
+        while(a[j]>0){
+            j--;
+        }
+    } 
+    if(i<j){
+        int temp;
+        temp=a[i];
+        a[i]=a[j];
+        a[j]=temp;
+    }
+}
+
 int main()
 {
     int n;
