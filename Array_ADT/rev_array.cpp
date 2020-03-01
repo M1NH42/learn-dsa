@@ -65,4 +65,16 @@ int main()
     display(arr,n);
 
     cout<<"***********************************"<<endl;
+
+    int element;
+    cout<<"Enter element: ";
+    cin>> element;
+    insert_in_sorted(arr, element, n);
+    cout<<"***********************************"<<endl;
+    cout<<"Elements are\n";
+    display(arr, n);
+
+    cout<<"***********************************"<<endl;
+
+    return 0;
 }
