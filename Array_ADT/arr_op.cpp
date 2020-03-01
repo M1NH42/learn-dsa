@@ -8,6 +8,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// displays array elements from index 0 to n-1
+void display(int arr[], int n)
+{
+    for(int i=0; i<n; i++)
+    {
+        cout<<arr[i]<<endl;
+    }
+}
+
 int main()
 {
     int n;
