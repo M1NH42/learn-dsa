@@ -27,7 +27,7 @@ void rev_array(int arr[], int n)
 
 int main()
 {
-    int n;
+    int n; // size or lentgh
     cout<<"Enter n: ";
     cin>>n;
 
@@ -35,7 +35,7 @@ int main()
 
     cout<<"***********************************"<<endl;
     cout<<"Enter elemnts\n";
-    for(int i=0; i<n;i++)
+    for(int i=0; i<n;i++) // runs for n-1 times
     {
         cin>>arr[i]; // puts elements in an array
     }
