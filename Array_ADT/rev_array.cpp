@@ -25,6 +25,19 @@ void rev_array(int arr[], int n)
     }
 }
 
+// insert element x at its correct position in a
+// sorted array
+void insert_in_sorted(int arr[], int x, int n)
+{
+    int i = n-1; // start from last element
+    while(arr[i]>x) // checks if x is smaller than array elements
+    {
+        arr[i+1]=arr[i]; // if smaller the shift right
+        i--; // move towards left side
+    }
+    arr[i+1]=x; // store x at correct position
+}
+
 int main()
 {
     int n; // size or lentgh
