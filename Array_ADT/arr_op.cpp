@@ -82,7 +82,7 @@ int main()
     insert_in_sorted(a,n,val);
 
     cout<<"***********************************"<<endl;
-    cout<<"Array is sorted: "<<is_sorted(a,n);
+    cout<<<<is_sorted(a,n);
 
     neg_pos(a,n); // called
 
