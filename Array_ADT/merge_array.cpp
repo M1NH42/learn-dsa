@@ -48,7 +48,7 @@ int merge_arrays(int a[], int n, int b[], int m, int c[])
         k++;
     }
     int p=n+m;
-    return c[p];
+    return c[p]; // return c[] as result
 }
 
 int main()
