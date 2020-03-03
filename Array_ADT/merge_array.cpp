@@ -79,10 +79,10 @@ int main()
     }
     int C[m+n];
     int p=n+m;
-    int c=merge_arrays(A,n,B,m,C);
+    int c=merge_arrays(A,n,B,m,C); // function called
     cout<<"*********************************************\n";
     cout<<"Mereged array : \n";
-    display(C,p);
+    display(C,p); // displayed the third array i.e. c[]
 
     return 0;
 }
