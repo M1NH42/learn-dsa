@@ -13,6 +13,8 @@ void display(int a[], int n)
     }
 }
 
+
+// this function will merge two sorted arrays together
 int merge_arrays(int a[], int n, int b[], int m, int c[])
 {
     int i, j, k;
