@@ -21,19 +21,22 @@ int merge_arrays(int a[], int n, int b[], int m, int c[])
     i=j=k=0;
     while(i<n && j<m)
     {
-        if(a[i]<b[j])
+        if(a[i]<b[j]) // if element of a is smaller the element of b
         {
-            c[k]=a[i];
-            i++;
-            k++;
+            c[k]=a[i]; // store in c
+            i++; // incremenet index in a[]
+            k++; // increment index in c[]
         }
         else
         {
-            c[k]=b[j];
-            j++;
-            k++;
+            c[k]=b[j]; // else store b[] lemeent in c[]
+            j++; // increment index of b[]
+            k++; // increment index of c[]
         }
     }
+    // there might be case where element in any of the array might left
+    // so for that we'll start with present value of i and j and store in c[]
+    // by incrementing it's array index by one
     for(; i<n; i++)
     {
         c[k]=a[i];
