@@ -77,7 +77,8 @@ int main()
     {
         cin>>B[i]; // stores elements in B[] index starting from 0 t0 m-1
     }
-    int C[m+n];
+
+    int C[m+n]; // define array c[] with size = (sizeof(a[])) + (sizeof(b[])) 
     int p=n+m;
     int c=merge_arrays(A,n,B,m,C); // function called
     cout<<"*********************************************\n";
