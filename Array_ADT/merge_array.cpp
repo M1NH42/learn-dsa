@@ -13,9 +13,37 @@ void display(int a[], int n)
     }
 }
 
-int merge_arrays(int a[], int n, int b[], int m)
+int merge_arrays(int a[], int n, int b[], int m, int c[])
 {
-    
+    int i, j, k;
+    i=j=k=0;
+    while(i<n && j<m)
+    {
+        if(a[i]<b[j])
+        {
+            c[k]=a[i];
+            i++;
+            k++;
+        }
+        else
+        {
+            c[k]=b[j];
+            j++;
+            k++;
+        }
+    }
+    for(; i<n; i++)
+    {
+        c[k]=a[i];
+        k++;
+    }
+    for(; j<m; j++)
+    {
+        c[k]=b[j];
+        k++;
+    }
+    int p=n+m;
+    return c[p];
 }
 
 int main()
@@ -44,6 +72,12 @@ int main()
     {
         cin>>B[i]; // stores elements in B[] index starting from 0 t0 m-1
     }
+    int C[m+n];
+    int p=n+m;
+    int c=merge_arrays(A,n,B,m,C);
+    cout<<"*********************************************\n";
+    cout<<"Mereged array : \n";
+    display(C,p);
 
     return 0;
 }
