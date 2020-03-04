@@ -13,7 +13,7 @@ int main()
 
     for(int i=0; a[i]!='\0';i++)
     {
-        if(a[i] ==' ' && a[i-1] != ' ')
+        if(a[i] ==' ' && a[i-1] != ' ') // checks for spaces and white spaces(if prev and present both are spaces)
         {
             c_word++;
         }
