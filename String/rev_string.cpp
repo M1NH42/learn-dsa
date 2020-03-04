@@ -4,7 +4,7 @@
 using namespace std;
 
 int main(){
-    int n;
+    int n; // size of char array if n=5 then 4 elements because it includes a null character
     cout<<"Enter n: ";
     cin>>n;
 
