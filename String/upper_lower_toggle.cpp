@@ -30,16 +30,16 @@ int main()
 
     for(int i=0;a[i]!='\0';i++)
     {
-        if(a[i]>= 'A' && a[i]<= 'Z')
+        if(a[i]>= 'A' && a[i]<= 'Z') // check if that alphabet falls in upper case range or not
         {
             a[i] += 32;
         }
-        else if(a[i]>='a' && a[i]<='z')
+        else if(a[i]>='a' && a[i]<='z') // checks if that alphabet falls in lower case range or not
         {
             a[i] -= 32;
         }
     }
-    printf("%s",a);
+    printf("%s",a); // prints the final result after above operations
 
     return 0;
 }
