@@ -43,7 +43,7 @@ int main()
         cin>>a[i]; // takes input from the user
     } */
     /////duplicate(a,n);
-    char a[]="Minhaz";
+    char a[]="aallaammm";
     int h[26]={0}; // create hash table of size 26 (0-25) letters
 
     for(int i=0; a[i] != '\0'; i++)
@@ -55,6 +55,8 @@ int main()
         if(h[i]>1)
         {
             cout<<"Duplicate elements\n";
+            cout<<"************************\n";
+            cout<<i+97<<endl;
             //return 0;
         }
     }
