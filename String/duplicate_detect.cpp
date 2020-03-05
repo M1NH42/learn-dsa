@@ -56,7 +56,7 @@ int main()
         {
             cout<<"Duplicate elements\n";
             cout<<"************************\n";
-            cout<<i+97<<endl;
+            cout<<i+97<<endl; // prints the ASCII code for the element
             //return 0;
         }
     }
