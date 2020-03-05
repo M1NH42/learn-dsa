@@ -5,8 +5,8 @@ using namespace std;
 
 int main()
 {
-    char a[]="madam";
-    char b[]="adamm";
+    char a[]="decimal";
+    char b[]="medicak";
 
     int h[26]={0}; // hash array
 
@@ -14,22 +14,22 @@ int main()
     {
         h[a[i]-97] += 1;
     }
-    for(int i=0; b[i] != '\0'; i++)
+
+    int i;
+    for(i=0; b[i] != '\0'; i++)
     {
-        h[(b[i]-97)] -= 1;
-    }
-    for(int i=0;i<26;i++)
-    {
-        if(h[i]>0)
+        h[(a[i]-97)] -= 1;
+        if((h[a[i]-97])<0)
         {
-            cout<<"Not an anagram\n"; // TODO: Remove errors in this program
-        }
-        else
-        {
-            cout<<"Anagram\n";
+            cout<<"not anagram\n";
             break;
         }
     }
+    if(b[i]=='\0')
+    {
+        cout<<"Anagram\n";
+    }
+    
     //cout<<"Anagram\n";
     return 0;
 }
