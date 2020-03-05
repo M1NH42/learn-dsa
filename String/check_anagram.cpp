@@ -1,5 +1,5 @@
 // This program is to check if two strings are anagrams or not
-// TODO: Remove errors in this program
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -22,7 +22,7 @@ int main()
     {
         if(h[i]>0)
         {
-            cout<<"Not an anagram\n";
+            cout<<"Not an anagram\n"; // TODO: Remove errors in this program
         }
         else
         {
