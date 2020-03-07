@@ -27,8 +27,26 @@ int Get(struct Matrix m, int i, int j)
     else
     {
         return 0;
+    }    
+}
+
+void display(Matrix m)
+{
+    for(int i=1;i<=m.n;i++)
+    {
+        for(int j=1;j<=m.n;j++)
+        {
+            if(i>=j)
+            {
+                cout<<m.A[i*(i-1)/2 + (j-1)]<<" ";
+            }
+            else
+            {
+                cout<<"0 ";
+            }
+        }
+        cout<<endl;
     }
-    
 }
 
 int main()
@@ -51,6 +69,9 @@ int main()
             Set(&m, i, j, x);
         }
     }
+
+    cout<<"\n*********\n";
+    display(m);
 
     return 0;
 }
