@@ -1,5 +1,5 @@
 // This program implements the lower triangular matrix using row major
-// which means elments will be stored  row wise as shown:
+// which means elements will be stored  row wise as shown:
 
 #include<bits/stdc++.h>
 using namespace std;
