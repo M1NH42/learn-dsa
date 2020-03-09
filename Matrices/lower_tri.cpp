@@ -23,6 +23,9 @@ void Set(struct Matrix *m, int i, int j, int x)
     }
 }
 
+// this function helps retrieve the element at lower
+// triangular index given by the formula below: 
+
 int Get(struct Matrix m, int i, int j)
 {
     if(i>=j)
@@ -34,6 +37,9 @@ int Get(struct Matrix m, int i, int j)
         return 0;
     }    
 }
+
+// Displays the entire structure as a matrix of
+// size n*n
 
 void display(Matrix m)
 {
