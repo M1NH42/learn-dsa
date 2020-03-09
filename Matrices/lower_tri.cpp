@@ -77,12 +77,12 @@ int main()
         for(int j=1;j<=m.n;j++)
         {
             cin>>x;
-            Set(&m, i, j, x);
+            Set(&m, i, j, x); // called
         }
     }
 
     cout<<"\n*********\n";
-    display(m);
+    display(m); // called
 
     return 0;
 }
