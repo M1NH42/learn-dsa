@@ -4,11 +4,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+// basic array structure with n size
 struct Matrix
 {
     int *A;
     int n;
 };
+
+// This function sets the element at lower triangular
+// matrix iff i >= j
 
 void Set(struct Matrix *m, int i, int j, int x)
 {
