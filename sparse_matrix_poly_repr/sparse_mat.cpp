@@ -64,6 +64,7 @@ void display (struct Sparse s)
                 printf("0 ");
             }
         }
+        // nest line 
         printf("\n");
     }
 }
@@ -72,8 +73,12 @@ int main()
 {
     struct Sparse s;
 
+    // called create fxn
+    // call by reference
     create(&s);
 
+    // calle display
+    // call by value
     display(s);
 
 
