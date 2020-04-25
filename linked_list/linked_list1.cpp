@@ -42,10 +42,10 @@ int main()
 
     display(first); // called
 
-    if(first->next == NULL)
+    /* if(first->next == NULL)
     {
         cout << "last node\n";
-    }
+    } */
 
     return 0;
 
