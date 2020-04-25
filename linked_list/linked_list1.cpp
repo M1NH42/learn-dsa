@@ -28,16 +28,24 @@ void display(struct Node *p)
 
 // 2 recurssive method
 // display function
-
+// this displays the data in excessing order
+// because display_rec fxn is called after the 
+// print statement
 void dispay_rec(struct Node * p)
 {
     // base condition for cont..
     if(p != NULL)
-    {
-        cout<< p->data << endl;
+    {   
+        // if we call the recurssive fxn first then the print
+        // statement will be executed in the returning acces
+        // prints the node data in reverse order
         dispay_rec(p->next);
+        cout<< p->data << endl;
+        // dispay_rec(p->next);
     }
 }
+
+
 
 int main()
 {
