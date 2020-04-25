@@ -13,7 +13,7 @@ struct Node
     int data;
     struct Node * next;
 };
-
+// 1 iterative method
 // displays the data of the nodes
 void display(struct Node *p)
 {
@@ -21,8 +21,21 @@ void display(struct Node *p)
     // as long as we reach the last node
     while (p != NULL)
     {
-        printf("%d ", p->data);
+        printf("%d \n", p->data);
         p = p -> next;
+    }
+}
+
+// 2 recurssive method
+// display function
+
+void dispay_rec(struct Node * p)
+{
+    // base condition for cont..
+    if(p != NULL)
+    {
+        cout<< p->data << endl;
+        dispay_rec(p->next);
     }
 }
 
@@ -41,6 +54,10 @@ int main()
     first -> next = NULL; 
 
     display(first); // called
+
+    cout << "*************** break *******************\n";
+
+    dispay_rec(first);
 
     /* if(first->next == NULL)
     {
