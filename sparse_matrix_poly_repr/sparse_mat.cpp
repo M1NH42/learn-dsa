@@ -69,6 +69,35 @@ void display (struct Sparse s)
     }
 }
 
+// function to add two sparse matices
+struct Sparse * add(struct Sparse *s1, struct Sparse *s2)
+{
+    struct Sparse *sum;
+    int i, j, k;
+    i=j=k=0;
+
+    if (s1->m != s2->m && s1->n != s2->n)
+    {
+        return NULL;
+    }
+    sum = (struct Sparse *) malloc (sizeof(struct Sparse));
+
+    sum->element = (struct Element *)malloc((s1->n + s2->n) *sizeof(struct Element));
+
+    // check if i less than number of non zero lemeents
+    while (i < s1->non && j< s2->non)
+    {
+        if(s1->element[i].row<s2->element[j].row)
+        {
+            sum->element[k++] = s1->element[i++];
+        }
+        else if (s1->element[i].row>s2->element[j].row)
+        {
+            sum->element[k++] = s2->element[j++];
+        }
+    }
+}
+
 int main()
 {
     struct Sparse s;
