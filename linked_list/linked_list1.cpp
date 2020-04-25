@@ -58,7 +58,7 @@ int main()
     // store data
     first -> data = 10;
 
-    // next does not point to any of the bext node
+    // next does not point to any node
     first -> next = NULL; 
 
     display(first); // called
