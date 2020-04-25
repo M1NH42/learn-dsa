@@ -14,8 +14,11 @@ struct Node
     struct Node * next;
 };
 
+// displays the data of the nodes
 void display(struct Node *p)
 {
+    // traverse through the linked list
+    // as long as we reach the last node
     while (p != NULL)
     {
         printf("%d ", p->data);
@@ -33,7 +36,9 @@ int main()
 
     // store data
     first -> data = 10;
-    first -> next = NULL;
+
+    // next does not point to any of the bext node
+    first -> next = NULL; 
 
     display(first); // called
 
