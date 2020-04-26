@@ -128,6 +128,8 @@ int max_node(struct Node *p)
     }
     return max;
 }
+// to find minimum element in the linked list we must follow the same 
+// method but changing variables
 
 int main()
 {
