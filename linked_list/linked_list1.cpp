@@ -147,5 +147,8 @@ int main()
     // call count_nodes()
     cout << "Number of nodes: " << count_nodes(first)<<endl;
 
+    // call sum_of_nodes()
+    cout << "Sum of nodes: "<< sum_of_nodes(first)<<endl;
+
     return 0;
 }
