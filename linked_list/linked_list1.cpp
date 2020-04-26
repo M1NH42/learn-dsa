@@ -112,6 +112,23 @@ int sum_of_nodes(struct Node *p)
     return sum;
 }
 
+
+// to find max value in a linked list
+int max_node(struct Node *p)
+{
+    int max = p->data;
+
+    while(p)
+    {
+        if (p->data > max)
+        {
+            max = p->data;
+        }
+        p = p->next;
+    }
+    return max;
+}
+
 int main()
 {
     //struct Node *first = NULL;
@@ -129,14 +146,17 @@ int main()
 
     // create space for temp
     //struct Node *temp;
-    int A[]={3,5,7,10,25,8,32,2};
-    create(A, 5);
+    int A[]={3,5,7,10,25,8,32,2, 56, 99};
+
+    int size_array = sizeof(A) / sizeof(A[0]);
+
+    create(A, size_array);
 
     display(first); // called
 
     cout << "*************** break *******************\n";
 
-    dispay_rec(first);
+    // dispay_rec(first);
 
     /* if(first->next == NULL)
     {
@@ -149,6 +169,9 @@ int main()
 
     // call sum_of_nodes()
     cout << "Sum of nodes: "<< sum_of_nodes(first)<<endl;
+
+    // return max element in a linked list
+    cout << "Max element : " << max_node(first)<< endl;
 
     return 0;
 }
