@@ -131,6 +131,23 @@ int max_node(struct Node *p)
 // to find minimum element in the linked list we must follow the same 
 // method but changing variables
 
+// search element in linked list
+// 1. Iterative
+
+// returns addres of that node where the key is present
+Node * search_node(struct Node *p, int key)
+{
+    while (p)
+    {
+        if(key == p->data)
+        {
+            return p;
+        }
+        p = p->next;
+    }
+    return NULL;
+}
+
 int main()
 {
     //struct Node *first = NULL;
@@ -174,6 +191,9 @@ int main()
 
     // return max element in a linked list
     cout << "Max element : " << max_node(first)<< endl;
+
+    // searching in a linked list
+    cout << "Element present at: " << search_node(first, 2)<<endl;
 
     return 0;
 }
