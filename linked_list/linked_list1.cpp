@@ -18,11 +18,23 @@ struct Node
 void create(int A[],int n)
 {
     int i;
+
+    // create node pointers
     struct Node *t,*last;
+
+    // allocate memory in the heap section of the memory
     first=(struct Node *)malloc(sizeof(struct Node));
+    
+    // assign first element of array to data of first node
     first->data=A[0];
+    
+    // make point to NULL
     first->next=NULL;
+    
+    // make last and first point to the same node
     last=first;
+    
+    // loop thru and allocate nodes
     for(i=1;i<n;i++)
     {
         t=(struct Node*)malloc(sizeof(struct Node));
