@@ -45,6 +45,21 @@ void create(int A[],int n)
     }
 }
 
+// counting number of nodes in the linked list
+int count_nodes(struct Node *p)
+{
+    int count = 0;
+
+    // condition
+    while(p != NULL)
+    {
+        count++;
+        p = p->next;
+    }
+
+    // return result
+    return count;
+}
 
 // 1 iterative method
 // displays the data of the nodes
@@ -110,6 +125,10 @@ int main()
     {
         cout << "last node\n";
     } */
+
+
+    // call count_nodes()
+    cout << "Number of nodes: " << count_nodes(first)<<endl;
 
     return 0;
 
