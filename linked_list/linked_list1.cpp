@@ -96,7 +96,21 @@ void dispay_rec(struct Node * p)
     }
 }
 
+// sum of nodes
+int sum_of_nodes(struct Node *p)
+{
+    int sum=0;
 
+    // traverse and add
+    while(p) // equivalent to p!=NULL
+    {
+        sum += p->data;
+        p = p->next;
+    }
+
+    // return results
+    return sum;
+}
 
 int main()
 {
@@ -134,5 +148,4 @@ int main()
     cout << "Number of nodes: " << count_nodes(first)<<endl;
 
     return 0;
-
 }
