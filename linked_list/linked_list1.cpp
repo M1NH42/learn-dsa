@@ -46,6 +46,7 @@ void create(int A[],int n)
 }
 
 // counting number of nodes in the linked list
+// 1 iterative approach
 int count_nodes(struct Node *p)
 {
     int count = 0;
@@ -60,6 +61,8 @@ int count_nodes(struct Node *p)
     // return result
     return count;
 }
+
+// 2. Recurssive approach to count number of nodes
 
 // 1 iterative method
 // displays the data of the nodes
