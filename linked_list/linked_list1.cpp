@@ -12,7 +12,28 @@ struct Node
 {
     int data;
     struct Node * next;
-};
+}*first = NULL;
+
+// create linked list
+void create(int A[],int n)
+{
+    int i;
+    struct Node *t,*last;
+    first=(struct Node *)malloc(sizeof(struct Node));
+    first->data=A[0];
+    first->next=NULL;
+    last=first;
+    for(i=1;i<n;i++)
+    {
+        t=(struct Node*)malloc(sizeof(struct Node));
+        t->data=A[i];
+        t->next=NULL;
+        last->next=t;
+        last=t;
+    }
+}
+
+
 // 1 iterative method
 // displays the data of the nodes
 void display(struct Node *p)
@@ -49,17 +70,23 @@ void dispay_rec(struct Node * p)
 
 int main()
 {
-    struct Node *first = NULL;
+    //struct Node *first = NULL;
 
     // add node
     // allocate memory in heap
-    first = (struct Node *) malloc(sizeof(struct Node));
+    // first = (struct Node *) malloc(sizeof(struct Node));
 
     // store data
-    first -> data = 10;
+    //first -> data = 10;
 
     // next does not point to any node
-    first -> next = NULL; 
+    //first -> next = NULL; 
+
+
+    // create space for temp
+    //struct Node *temp;
+    int A[]={3,5,7,10,25,8,32,2};
+    create(A, 5);
 
     display(first); // called
 
