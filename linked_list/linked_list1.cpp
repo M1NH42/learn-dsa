@@ -199,6 +199,19 @@ void insert_at_pos(struct Node *p, int index, int data)
     }
 }
 
+// insert_at_last()
+/* void insert_at_last(int data)
+{
+    struct Node * new_node = (struct Node *)malloc(sizeof(struct Node));
+
+    new_node->data = data;
+
+    if(first == NULL)
+    {
+        first = last = 
+    }
+} */
+
 int main()
 {
     //struct Node *first = NULL;
