@@ -151,12 +151,16 @@ Node * search_node(struct Node *p, int key)
 // function to insert at the begining of the linked list
 void insert_at_beg(struct Node *p, int data)
 {
+    // create new_node
     struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
 
+    // insert data into the new_node
     new_node->data = data;
 
+    // make newnode point to first
     new_node->next = first;
 
+    // make the newnode as first node
     first = new_node;
 }
 
