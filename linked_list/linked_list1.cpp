@@ -148,6 +148,18 @@ Node * search_node(struct Node *p, int key)
     return NULL;
 }
 
+// function to insert at the begining of the linked list
+void insert_at_beg(struct Node *p, int data)
+{
+    struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
+
+    new_node->data = data;
+
+    new_node->next = first;
+
+    first = new_node;
+}
+
 int main()
 {
     //struct Node *first = NULL;
@@ -181,6 +193,11 @@ int main()
     {
         cout << "last node\n";
     } */
+
+    //call insert at begining function
+    insert_at_beg(first, 121);
+
+    display(first);
 
 
     // call count_nodes()
