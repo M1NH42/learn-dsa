@@ -149,7 +149,7 @@ Node * search_node(struct Node *p, int key)
 }
 
 // function to insert at the begining of the linked list
-void insert_at_beg(struct Node *p, int data)
+/* void insert_at_beg(struct Node *p, int data)
 {
     // create new_node
     struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
@@ -162,6 +162,41 @@ void insert_at_beg(struct Node *p, int data)
 
     // make the newnode as first node
     first = new_node;
+} */
+
+// combine function to insert at any given position including
+// before the first node
+void insert_at_pos(struct Node *p, int index, int data)
+{
+    //struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
+
+    if (index<0 || index > count_nodes(p))
+    {
+        return;
+    }
+
+    struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
+
+    new_node->data = data;
+
+    if (index == 0)
+    {
+        // points to frist node
+        new_node->next = first;
+
+        // make it first node
+        first = new_node;
+    }
+    else
+    {
+        for (int i=0; i<index-1; i++)
+        {
+            p =p->next;
+        }
+        new_node->next = p->next;
+
+        p->next = new_node;
+    }
 }
 
 int main()
@@ -198,8 +233,11 @@ int main()
         cout << "last node\n";
     } */
 
-    //call insert at begining function
-    insert_at_beg(first, 121);
+    // call insert at begining function
+    // insert_at_beg(first, 121);
+
+    // insert at any position
+    insert_at_pos(first, 4, 221);
 
     display(first);
 
