@@ -320,7 +320,7 @@ int main()
 
     // create space for temp
     //struct Node *temp;
-    int A[]={3,5,7,10,25,32, 56, 99};
+    int A[]={3,5,7,10,25,32,21, 56, 99};
 
     int size_array = sizeof(A) / sizeof(A[0]);
 
@@ -363,7 +363,7 @@ int main()
     cout << "Max element : " << max_node(first)<< endl;
 
     // searching in a linked list
-    cout << "Element present at: " << search_node(first, 2)<<endl;
+    // cout << "Element present at: " << search_node(first, 2)<<endl;
 
 
     cout<<"Linked list sorted: "<<is_sorted(first)<<endl;
