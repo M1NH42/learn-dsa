@@ -283,6 +283,26 @@ int delete_at_pos(int pos)
     return del_val;
 }
 
+// if linked list is sorted or not
+int is_sorted(struct Node* p)
+{
+    // smallest number possible
+    // change according to your convinience
+    int x = -1;
+
+    while (p)
+    {
+        /* code */
+        if(p->data < x)
+        {
+            return 0;
+        }
+        x = p->data;
+        p=p->next;
+    }
+    return 1;    
+}
+
 int main()
 {
     //struct Node *first = NULL;
@@ -344,6 +364,9 @@ int main()
 
     // searching in a linked list
     cout << "Element present at: " << search_node(first, 2)<<endl;
+
+
+    cout<<"Linked list sorted: "<<is_sorted(first)<<endl;
 
     return 0;
 }
