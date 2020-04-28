@@ -246,6 +246,43 @@ void insert_in_sorted(struct Node * p, int data)
     }
 }
 
+// Function to delete a node at a given position
+int delete_at_pos(int pos)
+{
+    struct Node * p, *q;
+
+    int del_val = -1;
+
+    if (pos == 1)
+    {
+        p = first;
+        first = first->next;
+
+        // store delete value in del_val
+        del_val = first->data;
+
+        delete p;
+    }
+    else
+    {
+        p=first;
+        q=NULL;
+
+        for(int i=0; i<pos-1 && p; i++)
+        {
+            q=p;
+            p=p->next;
+        }
+        if(p) // if p is not null
+        {
+            q->next=p->next;
+            del_val=p->data;
+            delete p;
+        }
+    }
+    return del_val;
+}
+
 int main()
 {
     //struct Node *first = NULL;
@@ -289,6 +326,9 @@ int main()
     // display(first);
 
     insert_in_sorted(first, 45);
+
+    // called delete_at_pos() with pos
+    delete_at_pos(4);
 
     cout<<"##################################"<<endl;
     display(first);
