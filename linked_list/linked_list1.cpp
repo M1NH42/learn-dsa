@@ -212,6 +212,40 @@ void insert_at_pos(struct Node *p, int index, int data)
     }
 } */
 
+// insert in the sorted linked list
+void insert_in_sorted(struct Node * p, int data)
+{
+    Node *t, *q = NULL;
+
+    t = new Node;
+
+    t->data = data;
+    t->next = NULL;
+
+    if (first == NULL)
+    {
+        first = t;
+    }
+    else
+    {
+        while (p && p->data < data)
+        {
+            q=p;
+            p=p->next;
+        }
+        if(p == first)
+        {
+            t->next = first;
+            first = t;
+        }
+        else
+        {
+            t->next=p->next;
+            q->next=t;
+        }
+    }
+}
+
 int main()
 {
     //struct Node *first = NULL;
@@ -229,7 +263,7 @@ int main()
 
     // create space for temp
     //struct Node *temp;
-    int A[]={3,5,7,10,25,8,32,2, 56, 99};
+    int A[]={3,5,7,10,25,32, 56, 99};
 
     int size_array = sizeof(A) / sizeof(A[0]);
 
@@ -250,10 +284,14 @@ int main()
     // insert_at_beg(first, 121);
 
     // insert at any position
-    insert_at_pos(first, 4, 221);
+    // insert_at_pos(first, 4, 221);
 
+    // display(first);
+
+    insert_in_sorted(first, 45);
+
+    cout<<"##################################"<<endl;
     display(first);
-
 
     // call count_nodes()
     cout << "Number of nodes: " << count_nodes(first)<<endl;
