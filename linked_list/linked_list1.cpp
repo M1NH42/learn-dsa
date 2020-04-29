@@ -249,18 +249,27 @@ void insert_in_sorted(struct Node * p, int data)
 // Function to delete a node at a given position
 int delete_at_pos(int pos)
 {
+    // take two pointers
     struct Node * p, *q;
 
+    // init the value to be deleted
     int del_val = -1;
 
+    // check if the position is first or not
     if (pos == 1)
     {
+        // if true
+        // ppoints to first node
         p = first;
+
+        // move first pointer point to next
         first = first->next;
 
         // store delete value in del_val
         del_val = first->data;
 
+        // delete p because it's been allocated in
+        // the heap memory
         delete p;
     }
     else
@@ -268,6 +277,9 @@ int delete_at_pos(int pos)
         p=first;
         q=NULL;
 
+        // p points to the node whose data to be deleted
+        // q points to the previous node which helps to
+        // delete node p
         for(int i=0; i<pos-1 && p; i++)
         {
             q=p;
