@@ -230,23 +230,35 @@ void insert_in_sorted(struct Node * p, int data)
     // if linked list is empty
     if (first == NULL)
     {
+        // make new node as first
         first = t;
     }
     else
     {
+        // check if p is not null
         while (p && p->data < data)
         {
+            // q points to p
             q=p;
+
+            // move p forward
             p=p->next;
         }
         if(p == first)
         {
+            // if p is the head node
+            // new_node points to head_node
             t->next = first;
+
+            // make new_node as first
             first = t;
         }
         else
         {
+            // new_node's next points to present node's next
             t->next=p->next;
+
+            // q points to new_node which is added
             q->next=t;
         }
     }
