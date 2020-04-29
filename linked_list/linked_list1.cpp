@@ -215,13 +215,19 @@ void insert_at_pos(struct Node *p, int index, int data)
 // insert in the sorted linked list
 void insert_in_sorted(struct Node * p, int data)
 {
+    // init two pointer
     Node *t, *q = NULL;
 
+    // create node to be inserted
     t = new Node;
 
+    // store data in new node's data
     t->data = data;
+
+    // new_node's next to null
     t->next = NULL;
 
+    // if linked list is empty
     if (first == NULL)
     {
         first = t;
