@@ -143,14 +143,19 @@ int max_node(struct Node *p)
 // returns addres of that node where the key is present
 Node * search_node(struct Node *p, int key)
 {
+    // while(p != NULL)
     while (p)
     {
+        // if key is the first data of p
         if(key == p->data)
         {
+            // return p
             return p;
         }
+        // move p to next
         p = p->next;
     }
+    // elese return NULL
     return NULL;
 }
 
