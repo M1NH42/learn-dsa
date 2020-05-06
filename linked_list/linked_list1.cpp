@@ -116,16 +116,22 @@ int sum_of_nodes(struct Node *p)
 // to find max value in a linked list
 int max_node(struct Node *p)
 {
+    // init first as max
     int max = p->data;
 
+    // till p becomes NULL
     while(p)
     {
+        // if next data is greater than the max value
         if (p->data > max)
         {
+            // simply update the max vaue with the greater value
             max = p->data;
         }
+        // move p to next of p
         p = p->next;
     }
+    // return max value
     return max;
 }
 // to find minimum element in the linked list we must follow the same 
