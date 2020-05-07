@@ -181,13 +181,16 @@ void insert_at_pos(struct Node *p, int index, int data)
 {
     //struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
 
+    // index validation
     if (index<0 || index > count_nodes(p))
     {
         return;
     }
 
+    // create new node
     struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
 
+    // store data to new_node's data section
     new_node->data = data;
 
     if (index == 0)
