@@ -200,10 +200,13 @@ void insert_at_pos(struct Node *p, int index, int data)
     }
     else
     {
+        // move p to the node just before the position
         for (int i=0; i<index-1; i++)
         {
+            // move p to next
             p =p->next;
         }
+        // make new node point to p
         new_node->next = p->next;
 
         p->next = new_node;
