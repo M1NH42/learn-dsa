@@ -350,6 +350,10 @@ int is_sorted(struct Node* p)
     return 1;    
 }
 
+/* This function removes the duplicate value from a sorted linked list
+   by using two extra pointer to trace the duplicate element in the linked list
+ */
+
 void remove_duplicate()
 {
     struct Node *p = first;
