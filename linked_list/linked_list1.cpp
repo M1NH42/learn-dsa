@@ -356,18 +356,26 @@ int is_sorted(struct Node* p)
 
 void remove_duplicate()
 {
+    // point p to first node
     struct Node *p = first;
+
+    // point q to point next of the first node
     struct Node *q = first -> next;
 
+    // do not stop until
     while (q != NULL)
     {
+        // check if prev data is equals to next data
         if (p->data != q->data)
         {
+            // if not : slide bothe the pointer
             p=q;
             q=q->next;
         }
         else
         {
+            // if yes
+            // delete node q
             p->next = q->next;
             delete q;
             q = p->next;
