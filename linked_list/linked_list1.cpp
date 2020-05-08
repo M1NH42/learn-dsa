@@ -350,6 +350,27 @@ int is_sorted(struct Node* p)
     return 1;    
 }
 
+void remove_duplicate()
+{
+    struct Node *p = first;
+    struct Node *q = first -> next;
+
+    while (q != NULL)
+    {
+        if (p->data != q->data)
+        {
+            p=q;
+            q=q->next;
+        }
+        else
+        {
+            p->next = q->next;
+            delete q;
+            q = p->next;
+        }
+    }
+}
+
 int main()
 {
     //struct Node *first = NULL;
@@ -367,13 +388,13 @@ int main()
 
     // create space for temp
     //struct Node *temp;
-    int A[]={3,5,7,10,25,32,21, 56, 99};
+    int A[]={3,5,7,10, 10, 56, 56, 99};
 
     int size_array = sizeof(A) / sizeof(A[0]);
 
     create(A, size_array);
 
-    display(first); // called
+    // display(first); // called
 
     cout << "*************** break *******************\n";
 
@@ -392,12 +413,12 @@ int main()
 
     // display(first);
 
-    insert_in_sorted(first, 45);
+    // insert_in_sorted(first, 45);
 
     // called delete_at_pos() with pos
-    delete_at_pos(4);
+    // delete_at_pos(4);
 
-    cout<<"##################################"<<endl;
+    // cout<<"##################################"<<endl;
     display(first);
 
     // call count_nodes()
@@ -414,6 +435,9 @@ int main()
 
 
     cout<<"Linked list sorted: "<<is_sorted(first)<<endl;
+
+    remove_duplicate();
+    display(first);
 
     return 0;
 }
