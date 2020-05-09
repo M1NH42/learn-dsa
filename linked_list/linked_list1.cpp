@@ -383,6 +383,8 @@ void remove_duplicate()
     }
 }
 
+
+
 int main()
 {
     //struct Node *first = NULL;
