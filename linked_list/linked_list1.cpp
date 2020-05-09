@@ -384,6 +384,30 @@ void remove_duplicate()
 }
 
 
+// reversing a linked list
+
+void reverse_linked_list_a(){
+    Node *p = first;
+
+    int *A;
+    A = (int *)malloc(sizeof(int)*count_nodes(p));
+
+    int i =0;
+
+    while(p){
+        A[i] = p->data;
+        p=p->next;
+        i++;
+    }
+    p=first;
+    i--;
+    while(p){
+        p->data=A[i];
+        p=p->next;
+        i--;
+    }
+}
+
 
 int main()
 {
@@ -450,7 +474,10 @@ int main()
 
     cout<<"Linked list sorted: "<<is_sorted(first)<<endl;
 
-    remove_duplicate();
+    // remove_duplicate();
+    // display(first);
+
+    reverse_linked_list();
     display(first);
 
     return 0;
