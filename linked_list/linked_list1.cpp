@@ -408,6 +408,25 @@ void reverse_linked_list_a(){
     }
 }
 
+void reverse_lisnked_list_b(){
+    // we will use the concept of sliding pointers using three different
+    // pointers tail to each other
+    struct Node *p, *q, *r;
+
+    p=first;
+    q=NULL;
+    r=NULL;
+
+    while(p){
+        r=q;
+        q=p;
+        p=p->next;
+
+        q->next=r;
+    }
+    first=q;
+}
+
 
 int main()
 {
@@ -477,7 +496,7 @@ int main()
     // remove_duplicate();
     // display(first);
 
-    reverse_linked_list();
+    reverse_lisnked_list_b();
     display(first);
 
     return 0;
