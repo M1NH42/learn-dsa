@@ -385,7 +385,7 @@ void remove_duplicate()
 
 
 // reversing a linked list
-
+// in this we'll be using an auxillary array to reverse a linked list
 void reverse_linked_list_a(){
     Node *p = first;
 
@@ -408,6 +408,7 @@ void reverse_linked_list_a(){
     }
 }
 
+// reverse linked list by reversing the links between nodes using three pointers
 void reverse_lisnked_list_b(){
     // we will use the concept of sliding pointers using three different
     // pointers tail to each other
