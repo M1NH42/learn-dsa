@@ -397,14 +397,20 @@ void reverse_linked_list_a(){
 
     int i =0;
 
+    // until p becomes null
     while(p){
+        // copy linked list data to the array
         A[i] = p->data;
         p=p->next;
         i++;
     }
+    // again start from first
     p=first;
+
+    // point to end of the array
     i--;
     while(p){
+        // copy
         p->data=A[i];
         p=p->next;
         i--;
