@@ -410,9 +410,14 @@ void reverse_linked_list_a(){
     // point to end of the array
     i--;
     while(p){
-        // copy
+        // copy array data to linked list
+        // in the reverse order
         p->data=A[i];
+
+        // move p
         p=p->next;
+
+        // move i backwards
         i--;
     }
 }
