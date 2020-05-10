@@ -389,7 +389,10 @@ void remove_duplicate()
 void reverse_linked_list_a(){
     Node *p = first;
 
+    // pointer to an array
     int *A;
+
+    // dynamicaly allocate memory to an array
     A = (int *)malloc(sizeof(int)*count_nodes(p));
 
     int i =0;
