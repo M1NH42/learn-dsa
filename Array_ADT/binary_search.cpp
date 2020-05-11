@@ -15,33 +15,33 @@ struct Array // needed to combine properties of an array in one
 
 void display(struct Array arr)
 {
-    cout<<"Elements of an array\n";
-    for(int i=0;i<arr.length;i++)
+    cout << "Elements of an array\n";
+    for (int i = 0; i < arr.length; i++)
     {
-        cout<<arr.A[i]<<endl; // prints the elememts of an array
+        cout << arr.A[i] << endl; // prints the elememts of an array
     }
 }
 
 // this is iterative linear search function
 int i_linearsearch(struct Array arr, int key)
 {
-    int l=0;
-    int h=arr.length;
+    int l = 0;
+    int h = arr.length;
     int mid;
-    while(l<=h)
+    while (l <= h)
     {
-        mid=(l+h)/2;
-        if(key==arr.A[mid])
+        mid = (l + h) / 2;
+        if (key == arr.A[mid])
         {
             return mid;
         }
-        else if(key<arr.A[mid])
+        else if (key < arr.A[mid])
         {
-            return h= mid-1;
+            return h = mid - 1;
         }
         else
         {
-            return l= mid+1;
+            return l = mid + 1;
         }
     }
     return -1;
@@ -51,65 +51,65 @@ int i_linearsearch(struct Array arr, int key)
 //it's a tail recurssion
 // if tail recursion it's better to write function using loop
 // as tail recursion internally uses stack
-int r_binarysearch(struct Array arr,int l, int h,int key)
+int r_binarysearch(struct Array arr, int l, int h, int key)
 {
     /* int l=0;
     int h=arr.length; */
     int mid;
-    if(l<=h)
+    if (l <= h)
     {
-        mid=(l+h)/2;
-        if(key==arr.A[mid])
+        mid = (l + h) / 2;
+        if (key == arr.A[mid])
         {
             return mid;
         }
-        else if(key<arr.A[mid])
+        else if (key < arr.A[mid])
         {
-            return r_binarysearch(arr,l,mid-1,key);
+            return r_binarysearch(arr, l, mid - 1, key);
         }
         else
         {
-            return r_binarysearch(arr,mid+1,h,key);
+            return r_binarysearch(arr, mid + 1, h, key);
         }
     }
     return -1;
 }
 
 int main()
-{      
+{
     struct Array arr;
 
-    cout<<"Size of an array: ";
-    cin>>arr.size;
+    cout << "Size of an array: ";
+    cin >> arr.size;
 
-    arr.A =(int *)malloc(arr.size*sizeof(int)); // dynamically allocated heap memory to A
+    arr.A = (int *)malloc(arr.size * sizeof(int)); // dynamically allocated heap memory to A
 
     int n;
-    cout<<"Enter lenth of an arraY: ";
-    cin>>n;
+    cout << "Enter lenth of an arraY: ";
+    cin >> n;
 
-    arr.length=0;
+    arr.length = 0;
 
-    cout<<"Elements of an array\n";
-    for(int i=0;i<n;i++)
+    cout << "Elements of an array\n";
+    for (int i = 0; i < n; i++)
     {
-        cin>>arr.A[i]; //takes input from user upto n-1 elements
+        cin >> arr.A[i]; //takes input from user upto n-1 elements
     }
 
-    arr.length=n; // set length equals n
+    arr.length = n; // set length equals n
 
     display(arr); // array display() called
 
     int key;
-    cout<<"Enter key: ";
-    cin>>key;
-    int l=0;
-    int h=arr.length;
+    cout << "Enter key: ";
+    cin >> key;
+    int l = 0;
+    int h = arr.length;
 
     int res;
     //res=i_linearsearch(arr,key); // linearsearch() called and result is tored in res variable
-    res=r_binarysearch(arr,l,h,key);
-    cout<<"Element "<<key<<" present at: "<<res<<endl;
+    res = r_binarysearch(arr, l, h, key);
+    cout << "Element " << key << " present at: " << res << endl;
     //cout<<"Length of the array: "<<arr.length<<endl;
 
     return 0;
