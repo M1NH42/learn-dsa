@@ -428,17 +428,33 @@ void reverse_lisnked_list_b(){
     // pointers tail to each other
     struct Node *p, *q, *r;
 
+    // initialize three pointers
+
+    // points to first
     p=first;
+
+    // null pointer before p
     q=NULL;
+
+    // null but following q (assumption)
     r=NULL;
 
+    // while p is not null
     while(p){
+
+        // r follows q
         r=q;
+
+        // q foloows p
         q=p;
+
+        // and p moves forward by one step each
         p=p->next;
 
+        // and q points to r in reverse direction
         q->next=r;
     }
+    // q becomes first node of the linked list
     first=q;
 }
 
