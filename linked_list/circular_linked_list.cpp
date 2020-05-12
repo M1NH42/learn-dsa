@@ -32,12 +32,24 @@ void create_list(int A[], int n)
     }
 }
 
-
+void display_list(struct Node *p)
+{
+    do
+    {
+        printf("%d ->", p->data);
+        p = p->next;
+        // printf("\n\n");
+    } while(p != head);
+}
 
 int main()
 {
     int A[]={2,3,4,5,6};
     create_list(A,5);
+
+    display_list(head);
+
+    cout<<"\n";
 
     return 0;
 }
