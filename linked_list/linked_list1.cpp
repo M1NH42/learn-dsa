@@ -557,5 +557,15 @@ int main()
     reverse_lisnked_list_b();
     display(first);
 
+    if(is_loop)
+    {
+        cout<<"loop is present\n";
+    }
+    else
+    {
+        cout<<"linear linked list\n";
+    }
+    
+
     return 0;
 }
