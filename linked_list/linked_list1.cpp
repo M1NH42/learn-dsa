@@ -458,6 +458,23 @@ void reverse_lisnked_list_b(){
     first=q;
 }
 
+int is_loop()
+{
+    Node* p, *q;
+    p=q=first;
+
+    do
+    {
+        /* code */
+        p = p->next;
+        q = q->next;
+
+        q = q != NULL ? q->next:NULL;
+    } while (p && q);
+
+    return p==q?true:false;    
+}
+
 
 int main()
 {
@@ -476,7 +493,7 @@ int main()
 
     // create space for temp
     //struct Node *temp;
-    int A[]={3,5,7,10, 10, 56, 56, 99};
+    int A[]={3, 5, 7, 10, 99};
 
     int size_array = sizeof(A) / sizeof(A[0]);
 
@@ -485,6 +502,16 @@ int main()
     // display(first); // called
 
     cout << "*************** break *******************\n";
+
+
+    // for loop in linked list
+    struct Node *t1, *t2;
+    t1 = first->next->next;
+    t2 = first->next->next->next->next;
+
+    // from loop
+    t2->next=t1;
+
 
     // dispay_rec(first);
 
