@@ -458,10 +458,10 @@ void reverse_lisnked_list_b(){
     first=q;
 }
 
-int is_loop()
+int is_loop(Node *f)
 {
     Node* p, *q;
-    p=q=first;
+    p=q=f;
 
     do
     {
@@ -470,9 +470,9 @@ int is_loop()
         q = q->next;
 
         q = q != NULL ? q->next:NULL;
-    } while (p && q);
+    } while (p && q && p!=q);
 
-    return p==q?true:false;    
+    return p==q?1:0;    
 }
 
 
@@ -557,14 +557,14 @@ int main()
     reverse_lisnked_list_b();
     display(first);
 
-    if(is_loop)
+    /* if(is_loop(first))
     {
         cout<<"loop is present\n";
     }
     else
     {
         cout<<"linear linked list\n";
-    }
+    } */
     
 
     return 0;
