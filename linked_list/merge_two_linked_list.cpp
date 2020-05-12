@@ -74,16 +74,21 @@ void Merge(struct Node *p, struct Node *q)
         }
         else
         {
-        
-        last->next = q;
-        last = q;
-        q = q->next;
-        last->next = NULL;}
+
+            last->next = q;
+            last = q;
+            q = q->next;
+            last->next = NULL;
+        }
     }
-    if (p){
-        last->next = p;}
-    if (q){
-        last->next = q;}
+    if (p)
+    {
+        last->next = p;
+    }
+    if (q)
+    {
+        last->next = q;
+    }
 }
 int main()
 {
