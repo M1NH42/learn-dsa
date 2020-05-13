@@ -46,6 +46,22 @@ void push(struct Stack *st, int x)
     }
 }
 
+// 2. pull()
+int pop(struct Stack *st)
+{
+    int x =-1;
+    if (st->top==-1)
+    {
+        cout<<"stack underflow!\n";
+    }
+    else
+    {
+        x = st->S[st->top];
+        st->top--;
+    }
+    return x;
+}
+
 int main()
 {
     struct Stack st;
@@ -58,6 +74,12 @@ int main()
     push(&st, 40);
 
     display(st);
+
+    /* ** pop ** */
+    pop(&st);
+
+    display(st);
+
 
     return 0;
 }
