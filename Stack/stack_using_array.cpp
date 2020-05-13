@@ -62,6 +62,22 @@ int pop(struct Stack *st)
     return x;
 }
 
+// 3. peek(pos)
+int peek(struct Stack st, int pos)
+{
+    int x=-1;
+
+    if(st.top-pos+1 < 0)
+    {
+        cout<<"invalid pos\n";
+    }
+    else
+    {
+        x=st.S[st.top-pos+1];
+    }
+    return x;
+}
+
 int main()
 {
     struct Stack st;
