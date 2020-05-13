@@ -89,10 +89,12 @@ int main()
     push(&st, 30);
     push(&st, 40);
 
-    display(st);
+    // display(st);
 
     /* ** pop ** */
-    pop(&st);
+    // pop(&st);
+
+    cout<<peek(st, 3)<<endl;
 
     display(st);
 
