@@ -78,6 +78,26 @@ int peek(struct Stack st, int pos)
     return x;
 }
 
+// 4. stack_top
+int stack_top(struct Stack st)
+{
+    if(st.top==-1)
+    {
+        return -1;
+    }
+    return st.S[st.top];
+}
+
+// 5. is_empty()
+int is_empty(struct Stack st)
+{
+    if(st.top == -1)
+    {
+        return 1;
+    }
+    return 0;
+}
+
 int main()
 {
     struct Stack st;
@@ -94,9 +114,11 @@ int main()
     /* ** pop ** */
     // pop(&st);
 
-    cout<<peek(st, 3)<<endl;
+    cout<<"Element at idx : "<<peek(st, 3)<<endl;
 
     display(st);
+
+    cout<<"top : "<<stack_top(st)<<endl;
 
 
     return 0;
