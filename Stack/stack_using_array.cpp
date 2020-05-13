@@ -98,6 +98,16 @@ int is_empty(struct Stack st)
     return 0;
 }
 
+// 6. is_full()
+int is_full(struct Stack st)
+{
+    if(st.top==st.size-1)
+    {
+        return 1;
+    }
+    return 0;
+}
+
 int main()
 {
     struct Stack st;
