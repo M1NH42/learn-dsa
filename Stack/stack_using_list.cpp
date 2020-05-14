@@ -2,12 +2,14 @@
 
 using namespace std;
 
-struct Node{
+struct Node
+{
     int data;
     struct Node *next;
 }*top=NULL;
 
-void push(int x){
+void push(int x)
+{
     struct Node *t = (struct Node *)malloc(sizeof(struct Node));
 
     if(t==NULL)
