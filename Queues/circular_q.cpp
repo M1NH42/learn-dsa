@@ -59,9 +59,9 @@ void display(struct Queue q)
     do
     {
         /* code */
-        cout<<q.Q[i];
+        cout<<q.Q[i]<<" ";
         i=(i+1)%q.size;
-        
+
     } while (i != (q.rear+1)%q.size);
     cout<<endl;
 }
@@ -70,9 +70,17 @@ int main()
 {
     struct Queue q;
 
-    create(&q, 5);
+    create(&q, 5); // in a size of 5 we can only insert 4 elements
 
+    enqueue(&q, 10);
+    enqueue(&q, 20);
+    enqueue(&q, 30);
+    enqueue(&q, 40);
+    // enqueue(&q, 50);
+    // enqueue(&q, 60);
 
+    // call disp
+    display(q);
 
     return 0;
 }
