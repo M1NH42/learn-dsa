@@ -41,20 +41,14 @@ int dequeue(struct Queue *q)
         q->front++;
         x = q->Q[q->front];
     }
+    return x;
 }
 
 void display(struct Queue q)
 {
-    if(q.front==q.rear)
+    for(int i=q.front+1; i<=q.rear; i++)
     {
-        cout<<"Empty queue\n";
-    }
-    else
-    {
-        for(int i=q.front; i<q.rear; i++)
-        {
-            cout<<q.Q[i]<<endl;
-        }
+        cout<<q.Q[i]<<endl;
     }
     
 }
@@ -78,6 +72,12 @@ int main()
     enqueue(&q, 4);
     enqueue(&q, 3);
 
+
+    cout<<"del elem: "<<dequeue(&q)<<endl;
+
+
+    // frist elem
+    // cout<<"First elem: "<<q.Q[q.front]<<endl;
 
     // call display()
     display(q);
