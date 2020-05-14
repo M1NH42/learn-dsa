@@ -52,11 +52,27 @@ int dequeue(struct Queue *q)
     return x;    
 }
 
+void display(struct Queue q)
+{
+    int i=q.front+1;
+
+    do
+    {
+        /* code */
+        cout<<q.Q[i];
+        i=(i+1)%q.size;
+        
+    } while (i != (q.rear+1)%q.size);
+    cout<<endl;
+}
+
 int main()
 {
     struct Queue q;
 
     create(&q, 5);
+
+
 
     return 0;
 }
