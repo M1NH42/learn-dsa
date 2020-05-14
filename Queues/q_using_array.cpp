@@ -27,6 +27,38 @@ void enqueue(struct Queue *q, int x)
     }    
 }
 
+// deletion operation takes place from the front side
+int dequeue(struct Queue *q)
+{
+    int x = -1;
+    // check for empty
+    if(q->front==q->rear)
+    {
+        cout<<"Empty queue\n";
+    }
+    else
+    {
+        q->front++;
+        x = q->Q[q->front];
+    }
+}
+
+void display(struct Queue q)
+{
+    if(q.front==q.rear)
+    {
+        cout<<"Empty queue\n";
+    }
+    else
+    {
+        for(int i=q.front; i<q.rear; i++)
+        {
+            cout<<q.Q[i]<<endl;
+        }
+    }
+    
+}
+
 int main()
 {
     struct Queue q;
@@ -37,4 +69,18 @@ int main()
     q.Q = (int *)malloc(q.size * sizeof(int));
 
     q.front = q.rear = -1;
+
+
+    // called enq
+    enqueue(&q, 34);
+    enqueue(&q, 324);
+    enqueue(&q, 134);
+    enqueue(&q, 4);
+    enqueue(&q, 3);
+
+
+    // call display()
+    display(q);
+
+    return 0;
 }
