@@ -12,6 +12,21 @@ struct Queue
     int *Q;
 };
 
+// insertion tkes place from the rear of the queue
+void enqueue(struct Queue *q, int x)
+{
+    // check for full
+    if(q->rear == q->size-1)
+    {
+        cout<<"Queue is full\n";
+    }
+    else
+    {
+        q->rear++;
+        q->Q[q->rear] = x;
+    }    
+}
+
 int main()
 {
     struct Queue q;
