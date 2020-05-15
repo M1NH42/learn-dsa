@@ -3,6 +3,7 @@ using namespace std;
 
 #define rep(i,a,b) for(int i=a;i<=b;i++)
 
+// define Queue
 struct Queue
 {
     int size;
@@ -11,6 +12,7 @@ struct Queue
     int *Q;
 };
 
+// create a queue
 void create(struct Queue *q, int size)
 {
     q->size=size;
