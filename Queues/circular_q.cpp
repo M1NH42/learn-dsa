@@ -54,8 +54,10 @@ int dequeue(struct Queue *q)
     return x;    
 }
 
+// display elements of the queue
 void display(struct Queue q)
 {
+    // init i with front of the q
     int i=q.front+1;
 
     do
@@ -74,7 +76,7 @@ int main()
 
     create(&q, 5); // in a size of 5 we can only insert 4 elements
 
-    enqueue(&q, 10);
+    enqueue(&q, 10); // called enq
     enqueue(&q, 20);
     enqueue(&q, 30);
     enqueue(&q, 40);
