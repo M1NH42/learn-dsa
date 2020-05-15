@@ -19,7 +19,7 @@ void enq(int x)
     {
         t->data=x;
         t->next=NULL;
-        
+
         if(front==NULL)
         {
             front=rear=t;
@@ -31,6 +31,12 @@ void enq(int x)
         }
         
     }
+    
+}
+
+int deq()
+{
+    int x=-1;
     
 }
 
