@@ -29,12 +29,12 @@ void create(struct Queue *q, int size)
 }
 
 // enqueue in circular queue
-void enqueue(struct Queue *q, int x)
+void enqueue(struct Queue *q, struct Node *x)
 {
     // check full condition
     if((q->rear+1)%q->size == q->front)
     {
-        cout<<"q full hai\n";
+        std::cout<<"q full hai\n";
     }
     else
     {
@@ -50,7 +50,7 @@ struct Node * dequeue(struct Queue *q)
     // check mepty condition
     if(q->rear==q->front)
     {
-        cout<<"empty hai\n";
+        std::cout<<"empty hai\n";
     }
     else
     {
