@@ -78,17 +78,25 @@ void Inorder(struct Node *p)
 
 void level_order(struct Node* p)
 {
+    /* we will implement level order traversal with the help of queue */
     struct Queue q;
+
+    // create a queue of max size
     create(&q, 100);
 
+    // print root data
     cout<<p->data;
 
+    // insert address of the node to the queue
     enqueue(&q, p);
 
+    // check for empty condition
     while(q.front != q.rear)
     {
+        // remove address of q in the p node
         p = dequeue(&q);
         
+        // if lef child is present
         if(p->l_child)
         {
             cout<<p->l_child->data;
