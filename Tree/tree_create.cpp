@@ -76,11 +76,38 @@ void Inorder(struct Node *p)
     }
 }
 
+void level_order(struct Node* p)
+{
+    struct Queue q;
+
+    cout<<p->data;
+
+    enqueue(&q, p);
+
+    while(q.front != q.rear)
+    {
+        p = dequeue(&q);
+        
+        if(p->l_child)
+        {
+            cout<<p->l_child->data;
+            enqueue(&q, p->l_child);
+        }
+        if(p->r_child)
+        {
+            cout<<p->r_child->data;
+            enqueue(&q, p->r_child);
+        }
+    }
+}
+
 int main()
 {
     tree_create();
 
-    Inorder(root);
+    // Inorder(root);
+
+    level_order(root);
 
     return 0;
 }
