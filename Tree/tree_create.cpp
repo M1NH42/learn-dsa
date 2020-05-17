@@ -79,6 +79,7 @@ void Inorder(struct Node *p)
 void level_order(struct Node* p)
 {
     struct Queue q;
+    create(&q, 100);
 
     cout<<p->data;
 
