@@ -7,11 +7,13 @@ using namespace std;
 // init root
 struct Node *root=NULL;
 
+// create a tree using queue
 void tree_create()
 {
     struct Node *p, *t;
     int x;
 
+    // define queue
     struct Queue q;
     // create of some size
     // better use q using linked list
@@ -20,6 +22,7 @@ void tree_create()
     cout<<"Enter root : "<<endl;
     cin>>x;
 
+    // memory allocation for the root node
     root = (struct Node *)malloc(sizeof(struct Node));
 
     root->data=x;
@@ -56,6 +59,7 @@ void tree_create()
     }
 }
 
+// preorder traversal
 void preorder(struct Node *p)
 {
     if(p)
@@ -66,8 +70,10 @@ void preorder(struct Node *p)
     }
 }
 
+// inorder travesral of the tree
 void Inorder(struct Node *p)
 {
+    // if p not null
     if(p)
     {
         Inorder(p->l_child);
@@ -76,6 +82,7 @@ void Inorder(struct Node *p)
     }
 }
 
+// traverse level by level
 void level_order(struct Node* p)
 {
     /* we will implement level order traversal with the help of queue */
