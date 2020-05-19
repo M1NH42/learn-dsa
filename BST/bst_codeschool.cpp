@@ -161,12 +161,19 @@ int main()
 	// max element in the bs_tree
 	// cout << "Max elment : " << root->data << endl;
 
+
+	// max element in the binary search tree
+	// store in node variable max
 	BstNode *max = max_node_bst(root);
 	cout << "Max element: " << max->data << endl;
 
+	// return min lement in the node min
+	// and then print
 	BstNode *min = min_node_bst(root);
 	cout << "Min element: " << min->data << endl;
 
+	// print height of the bst by calling height function
+	// by passing root node
 	cout<<"Height of BST: "<<height(root)<<endl;
 
 	return 0;
