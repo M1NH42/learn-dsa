@@ -87,14 +87,18 @@ BstNode * max_node_bst(BstNode *p)
 // finds minimum element present in the bst
 BstNode *min_node_bst(BstNode *p)
 {
+	// check if root node is null or not
 	if (p == NULL)
 	{
 		return NULL;
 	}
+	// while(p's left child is not null)
 	while (p->left)
 	{
+		// shift p to p's left
 		p = p->left;
 	}
+	// return the node
 	return p;
 }
 
@@ -107,10 +111,18 @@ int height(BstNode *p)
 	{
 		return 0;
 	}
+	// calculate height of the left child
+	// store in variable x
 	x=height(p->left);
+
+	// claculate height of the right sub tree
+	// store that value to the varibale y
 	y=height(p->right);
+
+	// check for greater height
 	if(x>y)
 	{
+		// add 1 and return
 		return x+1;
 	}
 	else
