@@ -96,6 +96,27 @@ BstNode *min_node_bst(BstNode *p)
 	return p;
 }
 
+int height(BstNode *p)
+{
+	int x, y;
+	// if()
+	if(!p)
+	{
+		return 0;
+	}
+	x=height(p->left);
+	y=height(p->right);
+	if(x>y)
+	{
+		return x+1;
+	}
+	else
+	{
+		return y+1;
+	}
+	
+}
+
 int main()
 {
 	BstNode* root = NULL;  // Creating an empty tree
@@ -131,6 +152,7 @@ int main()
 	BstNode *min = min_node_bst(root);
 	cout << "Min element: " << min->data << endl;
 
+	cout<<"Height of BST: "<<height(root)<<endl;
 
 	return 0;
 }
