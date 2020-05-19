@@ -70,6 +70,7 @@ void inorder_traversal_bst(BstNode *root)
 	}
 }
 
+// finds the maximum element present in the bst
 BstNode * max_node_bst(BstNode *p)
 {
 	if (p == NULL)
@@ -83,6 +84,7 @@ BstNode * max_node_bst(BstNode *p)
 	return p;
 }
 
+// finds minimum element present in the bst
 BstNode *min_node_bst(BstNode *p)
 {
 	if (p == NULL)
@@ -96,6 +98,7 @@ BstNode *min_node_bst(BstNode *p)
 	return p;
 }
 
+// finds height of the binary search tree
 int height(BstNode *p)
 {
 	int x, y;
