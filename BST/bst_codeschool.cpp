@@ -1,3 +1,5 @@
+/* This is the implementation of the binary search tree with linked operation */
+
 #include<iostream>
 using namespace std;
 
