@@ -1,14 +1,16 @@
 #include<bits/stdc++.h>
 #include "chains.h"
 
-int hash(int key)
+using namespace std;
+
+int Hash(int key)
 {
     return key % 10;
 }
 
 void insert(struct Node * H[], int key)
 {
-    int index=hash(key);
+    int index=Hash(key);
     sorted_insert(&H[index], key);
 }
 
@@ -25,7 +27,7 @@ int main()
     insert(HT, 22);
     insert(HT, 42);
 
-    temp=search(HT[hash(21)], 21);
+    temp=search(HT[Hash(22)], 22);
 
     cout<<temp->data;
 
