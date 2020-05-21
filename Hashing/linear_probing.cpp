@@ -18,12 +18,19 @@ int Hash(int key)
 
 int probe(int H[], int key)
 {
+    // calculate hash function
     int index=Hash(key);
+
+    // start i with 0
     int i=0;
+
+    // check if any elemnt is present at that index or not
+    // if present increment i...
     while(H[(index+i)%SIZE]!=0)
     {
         i++;
     }
+    // and finally return index mod size
     return (index+i)%SIZE;
 }
 
