@@ -6,10 +6,15 @@
 #define SIZE 10
 using namespace std;
 
+// Function returns hash of the key
+// using modulo arithmatic
 int Hash(int key)
 {
     return key%SIZE;
 }
+
+// Returns linear probing
+// using h'(x) = [h(x) + f(i)], where f(i) = i, i=0,1,2,3,......
 
 int probe(int H[], int key)
 {
