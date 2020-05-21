@@ -27,6 +27,7 @@ int probe(int H[], int key)
     return (index+i)%SIZE;
 }
 
+// Function inserts the key to the hash table using linear probing
 void insert_in_hash_table(int H[], int key)
 {
     int index=Hash(key);
@@ -38,6 +39,7 @@ void insert_in_hash_table(int H[], int key)
     H[index]=key;
 }
 
+// Searching can be done using linear probing using abouve given formula
 int search_in_hash_table(int H[],int key)
 {
     int index=Hash(key);
