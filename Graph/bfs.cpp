@@ -2,8 +2,11 @@
 
 #include<bits/stdc++.h>
 #include "queue.h"
+
+// use namespace std to avoid std::cout again and again
 using namespace std;
 
+// Function to find breadth first search of the given graph
 void BFS(int G[][7], int start, int n)
 {
 //    static int visited[7] = {0};
