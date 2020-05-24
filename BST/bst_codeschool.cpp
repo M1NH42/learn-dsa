@@ -61,7 +61,7 @@ bool Search(BstNode* root, int data)
 	}
 }
 
-// inorder traversal results in sorted order node->data
+// in order traversal results in sorted order node->data
 void inorder_traversal_bst(BstNode *root)
 {
 	if (root)
@@ -117,8 +117,8 @@ int height(BstNode *p)
 	// store in variable x
 	x=height(p->left);
 
-	// claculate height of the right sub tree
-	// store that value to the varibale y
+	// calculate height of the right sub tree
+	// store that value to the variable y
 	y=height(p->right);
 
 	// check for greater height
