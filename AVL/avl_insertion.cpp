@@ -85,7 +85,7 @@ struct Node * insert_in_avl(struct Node *p, int key)
     p->height = node_height(p);
 
     // ROTATIONS ACC. TO NEED
-    if(balance_factor(p) == 2 && balance_factor(p->lchild ==1))
+    if(balance_factor(p) == 2 && balance_factor(p->lchild)==1)
     {
         return left_left_rot(p);
     }
@@ -105,6 +105,16 @@ struct Node * insert_in_avl(struct Node *p, int key)
 
     return p;
     
+}
+
+void inorder_traversal_AVL(struct Node *p)
+{
+    if(p!=NULL)
+    {
+        inorder_traversal_AVL(p->lchild);
+        cout<<p->data<<" ";
+        inorder_traversal_AVL(p->rchild);
+    }
 }
 
 int main()
