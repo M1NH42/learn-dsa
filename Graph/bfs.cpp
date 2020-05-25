@@ -75,6 +75,7 @@ void DFS(int G[][7], int start, int n)
 
 int main()
 {
+    // Graph representation thru adjacency matrix
     int G[7][7] = {{0,0,0,0,0,0,0},
                    {0,0,1,1,0,0,0},
                    {0,1,0,0,1,0,0},
