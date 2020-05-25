@@ -90,7 +90,7 @@ struct Node * insert_in_avl(struct Node *p, int key)
         return left_left_rot(p);
     }
 
-    else if(balance_factor(p) == 2 && balance_factor(p->lchild ==-1))
+    /* else if(balance_factor(p) == 2 && balance_factor(p->lchild ==-1))
     {
         return left_right_rot(p);
     }
@@ -101,7 +101,7 @@ struct Node * insert_in_avl(struct Node *p, int key)
     else if(balance_factor(p) == -2 && balance_factor(p->lchild ==1))
     {
         return right_left_rot(p);
-    }
+    } */
 
     return p;
     
@@ -111,7 +111,7 @@ int main()
 {
 
     root = insert_in_avl(root, 50);
-    insert_in_avl(root, 10);
+    insert_in_avl(root, 30);
     insert_in_avl(root, 20);
 
 
