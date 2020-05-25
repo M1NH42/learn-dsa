@@ -15,8 +15,18 @@ struct Node
 {
     struct Node *lchild;
     int data;
+    int height;
     struct Node *rchild;
 } *root = NULL;
+
+int node_height(struct Node *p)
+{
+    int hl, hr;
+    hl=p && p->lchild?p->lchild->height:0;
+    hr=p && p->rchild?p->rchild->height:0;
+
+    return hl>hr ? hl+1 : hr+1;
+}
 
 struct Node * get_new_node(int data)
 {
