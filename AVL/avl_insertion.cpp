@@ -124,6 +124,8 @@ int main()
     insert_in_avl(root, 30);
     insert_in_avl(root, 20);
 
+    inorder_traversal_AVL(root);
+
 
     return 0;
 }
