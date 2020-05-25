@@ -47,20 +47,20 @@ struct Node * get_new_node(int data)
     return new_node;
 }
 
-struct Node * insert_in_avl(struct Node *p, int val)
+struct Node * insert_in_avl(struct Node *p, int key)
 {
     // check if there's any node
     if(p == NULL)
     {
-        p = get_new_node(val);
+        p = get_new_node(key);
     }
-    else if(val <= p->data)
+    else if(key <= p->data)
     {
-        p->lchild = insert_in_avl(p->lchild, val);
+        p->lchild = insert_in_avl(p->lchild, key);
     }
     else
     {
-        p->rchild = insert_in_avl(p->rchild, val);
+        p->rchild = insert_in_avl(p->rchild, key);
     }
     return p;
     
