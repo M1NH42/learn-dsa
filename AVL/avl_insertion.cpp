@@ -122,8 +122,11 @@ struct Node * insert_in_avl(struct Node *p, int key)
     
 }
 
+
+// Inorder traversal of the AVL tree
 void inorder_traversal_AVL(struct Node *p)
 {
+    // Perform only if there is node present
     if(p!=NULL)
     {
         inorder_traversal_AVL(p->lchild);
@@ -135,10 +138,13 @@ void inorder_traversal_AVL(struct Node *p)
 int main()
 {
 
+    // insert in the tree
+    // set as root node
     root = insert_in_avl(root, 50);
     insert_in_avl(root, 30);
     insert_in_avl(root, 20);
 
+    // called inorder traversal
     inorder_traversal_AVL(root);
 
 
