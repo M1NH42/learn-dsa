@@ -77,6 +77,10 @@ struct Node * left_left_rot(struct Node * p)
     return pl;
 }
 
+// insert the newnode to the AVL tree
+// the function is almost similar to the insertion in the 
+// bst, key differnce is that it takes in consdration the height
+// of the node
 struct Node * insert_in_avl(struct Node *p, int key)
 {
     // check if there's any node
