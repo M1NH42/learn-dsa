@@ -24,13 +24,16 @@ struct Node
 // returns height of the root
 int node_height(struct Node *p)
 {
+    // init left height, right height
     int hl, hr;
     hl=p && p->lchild?p->lchild->height:0;
     hr=p && p->rchild?p->rchild->height:0;
 
+    // returns height
     return hl>hr ? hl+1 : hr+1;
 }
 
+// Returns the balance factor which is : height(left_subtree) - height(right_subtree)
 int balance_factor(struct Node *p)
 {
     int hl, hr;
