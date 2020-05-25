@@ -11,14 +11,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// defn of the Node
 struct Node
 {
     struct Node *lchild;
     int data;
     int height;
     struct Node *rchild;
-} *root = NULL;
+} *root = NULL; // initially root is null
 
+
+// returns height of the root
 int node_height(struct Node *p)
 {
     int hl, hr;
