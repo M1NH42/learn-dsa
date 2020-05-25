@@ -43,6 +43,9 @@ int balance_factor(struct Node *p)
     return hl-hr;
 }
 
+// Returns newnode by setting data to the node
+// height of the new_node
+// and returns the pointer to the newnode
 struct Node * get_new_node(int data)
 {
     struct Node * new_node;
@@ -54,6 +57,8 @@ struct Node * get_new_node(int data)
     return new_node;
 }
 
+// This actually performs the rotation on the particular node
+// aplly the rotation on left of the left node
 struct Node * left_left_rot(struct Node * p)
 {
     Node * pl = p->lchild;
