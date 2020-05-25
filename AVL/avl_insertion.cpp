@@ -42,10 +42,13 @@ struct Node * get_new_node(int data)
     struct Node * new_node;
     new_node = (struct Node *)malloc(sizeof(struct Node));
     new_node->data = data;
+    new_node->height = 1;
     new_node->lchild = new_node->rchild = NULL;
 
     return new_node;
 }
+
+
 
 struct Node * insert_in_avl(struct Node *p, int key)
 {
@@ -62,11 +65,39 @@ struct Node * insert_in_avl(struct Node *p, int key)
     {
         p->rchild = insert_in_avl(p->rchild, key);
     }
+
+    p->height = node_height(p);
+
+    // ROTATIONS ACC. TO NEED
+    if(balance_factor(p) == 2 && balance_factor(p->lchild ==1))
+    {
+        return left_left_rot(p);
+    }
+
+    else if(balance_factor(p) == 2 && balance_factor(p->lchild ==-1))
+    {
+        return left_right_rot(p);
+    }
+    else if(balance_factor(p) == -2 && balance_factor(p->lchild == -1))
+    {
+        return right_right_rot(p);
+    }
+    else if(balance_factor(p) == -2 && balance_factor(p->lchild ==1))
+    {
+        return right_left_rot(p);
+    }
+
     return p;
     
 }
 
 int main()
 {
-  return 0;
+
+    root = insert_in_avl(root, 50);
+    insert_in_avl(root, 10);
+    insert_in_avl(root, 20);
+
+
+    return 0;
 }
