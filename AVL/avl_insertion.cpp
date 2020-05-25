@@ -48,7 +48,23 @@ struct Node * get_new_node(int data)
     return new_node;
 }
 
+struct Node * left_left_rot(struct Node * p)
+{
+    Node * pl = p->lchild;
+    Node * plr = pl->rchild;
 
+    pl->rchild=p;
+    p->lchild=plr;
+
+    p->height=node_height(p);
+    pl->height=node_height(pl);
+
+    if(root==p)
+    {
+        root=pl;
+    }
+    return pl;
+}
 
 struct Node * insert_in_avl(struct Node *p, int key)
 {
