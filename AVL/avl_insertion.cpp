@@ -36,10 +36,16 @@ int node_height(struct Node *p)
 // Returns the balance factor which is : height(left_subtree) - height(right_subtree)
 int balance_factor(struct Node *p)
 {
+    // initialize height of the left sub tree and height of the right sub tree
     int hl, hr;
+
+    // conditional for the left sub tree
     hl=p && p->lchild?p->lchild->height:0;
+
+    // condtionals for the right sub tree
     hr=p && p->rchild?p->rchild->height:0;
 
+    // return the difference
     return hl-hr;
 }
 
