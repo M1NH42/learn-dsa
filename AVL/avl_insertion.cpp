@@ -76,15 +76,20 @@ struct Node * get_new_node(int data)
 // aplly the rotation on left of the left node
 struct Node * left_left_rot(struct Node * p)
 {
+    // init node pointer to the left of the p node
     Node * pl = p->lchild;
+
+    // to the right of the left sub-tree
     Node * plr = pl->rchild;
 
     pl->rchild=p;
     p->lchild=plr;
 
+    // calculate height of the node
     p->height=node_height(p);
     pl->height=node_height(pl);
 
+    // 
     if(root==p)
     {
         root=pl;
