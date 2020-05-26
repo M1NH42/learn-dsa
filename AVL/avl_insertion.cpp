@@ -48,10 +48,19 @@ int balance_factor(struct Node *p)
 // and returns the pointer to the newnode
 struct Node * get_new_node(int data)
 {
+    // create new node
     struct Node * new_node;
+
+    // assign memory in the heap
     new_node = (struct Node *)malloc(sizeof(struct Node));
+
+    // store data in the new_node data
     new_node->data = data;
+
+    // set initial height as one (1)
     new_node->height = 1;
+
+    // set left and right child as null
     new_node->lchild = new_node->rchild = NULL;
 
     return new_node;
@@ -88,12 +97,16 @@ struct Node * insert_in_avl(struct Node *p, int key)
     {
         p = get_new_node(key);
     }
+    // if key is less than the node's data
+    // move to left sub tree
     else if(key <= p->data)
     {
         p->lchild = insert_in_avl(p->lchild, key);
     }
     else
     {
+        // else
+        // move to right sub tree
         p->rchild = insert_in_avl(p->rchild, key);
     }
 
